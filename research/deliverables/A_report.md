@@ -153,8 +153,8 @@ US$87m of EBITDA **[P LVS-ER-2026-07-22]**. Hold-adjusted, the margin drifted do
 | The Plaza & Four Seasons | +32 | +11 | −0.2 pts | −1 |
 | Sands Macao | +27 | +6 | +3.0 pts | +3 |
 
-Compression is concentrated at The Londoner and The Venetian, where about 500 rooms are out of service
-for renovation through 4Q27 **[P LVS-ER-2026-10-21, Venetian footnote]**. Over the full post-period,
+Compression is concentrated at The Londoner and The Venetian. At The Venetian, about 500 rooms are out
+of service for renovation through 4Q27 **[P LVS-ER-2026-10-21, Venetian footnote]**. Over the full post-period,
 property margins moved very differently: Parisian −9.4 pts, Sands Macao −6.9, Venetian −5.9,
 Plaza/Four Seasons −3.1, Londoner +0.3 **[D results.json property_margin_pre_post]**. The Londoner's stability
 masks the return of its rooms during the ramp.
@@ -209,14 +209,14 @@ coincides with the Londoner ramp and the satellite closures.
 
 ## 6. Transferability
 
-Of eight candidate approaches (`deliverables/transfer_analysis.md`), two transfer with adaptation and one
-does not transfer at all:
+Of eight candidate approaches (`deliverables/transfer_analysis.md`, matrix T5):
 
-- **Transfer with adaptation:** control-group offer testing, and total-guest-value room allocation.
-- **Hypotheses to test, not results:** free-play right-sizing for established players, and reactivation of
-  new or lapsed players.
-- **Not prioritised:** labour scheduling (vendor evidence only).
-- **Not transferable:** online ML bonus personalisation (online gaming is illegal in Macau).
+- **Transferable with adaptation (3):** control-group offer testing; total-guest-value room allocation;
+  dynamic cash room pricing.
+- **Hypotheses to test, not results (3):** free-play right-sizing for established players; reactivation of
+  new or lapsed players; cross-property itinerary offers (no external case found).
+- **Not prioritised (1):** labour scheduling (vendor evidence only).
+- **Not transferable (1):** online ML bonus personalisation (online gaming is illegal in Macau).
 
 The Macau-specific adaptations are: process customer data in Macau on pseudonymised IDs
 **[U LAW-PDPA]**; exclude players flagged for responsible gambling; review host-managed premium players case
