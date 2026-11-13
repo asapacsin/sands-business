@@ -41,6 +41,46 @@ for label, text in (("A", A), ("B", B)):
     check(f"{label}: independence statement present", bool(re.search(r"no (internal|affiliation)", text, re.I)))
     check(f"{label}: no implied internal access", not re.search(r"\b(our data|internal sources told|confidential)\b", text, re.I))
 
+# 3b. §13: every block (paragraph, bullet, table) containing a figure carries an evidence tag
+TAG = re.compile(r"\[(?:[PDIUR])(?:[\] :])")
+FIG = re.compile(r"(\d[\d,.]*\s?(%|×|pts|points|bn\b|m\b|m a year|a night)|US\$\s?\d|HK\$\d|MOP\s?\d|\$\d)")
+
+
+def blocks(text: str):
+    body = text.split("\n---\n", 1)[-1] if text.startswith("---") else text
+    body = body.split("## 10. References")[0]
+    cur = []
+    for line in body.splitlines():
+        if not line.strip() or line.startswith("#"):
+            if cur:
+                yield "\n".join(cur)
+            cur = []
+            continue
+        if line.lstrip().startswith(("- ", "1.", "2.", "3.", "4.", "5.")) and cur and not cur[0].startswith("|"):
+            yield "\n".join(cur)
+            cur = []
+        cur.append(line)
+    if cur:
+        yield "\n".join(cur)
+
+
+for label, text in (("A", A), ("B", B), ("D", D)):
+    untagged = [b[:70] for b in blocks(text) if FIG.search(b) and not TAG.search(b) and not b.startswith("![")]
+    check(f"{label}: every figure-bearing block has an evidence tag", not untagged, str(untagged[:3]))
+
+# 3c. every source ID used in a tag exists in the source register
+register = {r["source_id"] for r in csv.DictReader(open(ROOT / "sources/source_register.csv"))}
+families = {sid.rsplit("-", 3)[0] if sid[-10:-6].isdigit() else sid for sid in register}
+ids = set(re.findall(r"\b((?:LVS|WYNN|MGM|MELCO)-ER-\d{4}-\d{2}-\d{2}|DICJ-Q-\d{4}|(?:TR|BRK|LIT|PR|LAW)-[A-Z0-9-]+)\b", A + B + D))
+missing = sorted(i for i in ids if i not in register)
+check("all cited source IDs exist in source register", not missing, str(missing))
+
+# 3d. cross-operator comparisons labelled directional; illustrative defined
+for label, text in (("A", A), ("B", B)):
+    if re.search(r"Wynn|MGM|Melco", text):
+        check(f"{label}: peer margin comparison labelled 'directional'", "directional" in text.lower())
+    check(f"{label}: illustrative defined as 'not a Sands figure'", "not a sands figure" in text.lower())
+
 # 4. Illustrative labelling
 check("A: illustrative values labelled", A.lower().count("illustrative") >= 4, f"count={A.lower().count('illustrative')}")
 

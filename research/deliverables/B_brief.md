@@ -4,47 +4,53 @@ subtitle: "Two-page research brief — independent analysis of public informatio
 date: "November 2026"
 ---
 
-**About this brief.** I prepared this independently, using only public sources: Las Vegas Sands SEC
-filings, Macao DICJ gaming statistics, peer filings and published research. I have no internal information
-and no affiliation with Sands China. It is offered as an example of how I would approach a commercial
-question; it does not assess management. The full report, data and code are available on request.
+**About this brief.** I prepared this independently, using only public sources. I have no internal
+information and no affiliation with Sands China. It is offered as an example of how I would approach a
+commercial question; it does not assess management. The full report, data and code are available on request.
+*Evidence tags:* **[P id]** primary filing or statistic; **[D]** derived by me from primary data;
+**[I]** illustrative, not a Sands figure; **[U id]** unverified (call transcript or press); **[R id]** published
+research. IDs refer to the project's source register.
 
 ### The question
 
-Since the second quarter of 2025, Sands China has invested more in mass-market customer reinvestment to
-rebuild share, with the level set by market conditions. The open question for any operator in that
-position is a **marginal** one: does the next dollar of reinvestment create more than it costs once Macao's
-~40% gaming tax is paid? And which properties and customer groups should receive it?
+According to its Q2 2025 earnings call, Sands China raised mass-market customer reinvestment from late
+April 2025 to rebuild share, with the level set by market conditions **[U TR-LVS-2025Q2]**. The open
+question for any operator in that position is a **marginal** one: does the next dollar of reinvestment
+create more than it costs once Macao's ~40% gaming tax is paid **[U PR-TAX-2022]**? And which properties
+and customer groups should receive it?
 
-### What the public data shows (LVS and DICJ primary data, 2Q25–3Q26 vs 3Q23–1Q25)
+### What the public data shows (2Q25–3Q26 vs 3Q23–1Q25)
 
-- **Share recovered.** Derived share of Macao GGR rose from 22.4% (1Q25) to 25.4% (3Q26), consistent with
-  analysts' 25.4%.
+- **Share recovered.** Sands' share of Macao GGR rose from 22.4% (1Q25) to 25.4% (3Q26) **[D from P LVS-ER, DICJ-Q]**.
+  A broker note cites 25.4% for 3Q26 **[U BRK-CLSA-2026Q3]**.
 - **Reinvestment rose.** The share of gross gaming win not booked as casino revenue (rebates, discounts,
-  comps and commissions) rose from 20.5% to 23.5%, roughly US$226m a year. This is a proxy, not an
-  internal ledger.
-- **Margins compressed, partly across the market.** Sands' margin fell 4.2 points; Wynn, MGM and Melco
-  moved by −2.6 to +0.2 points. Sands' 3Q26 margin, 27.8%, remains at or above those peers. The
-  relative gap of about −2.8 points also reflects the Londoner ramp, room renovations and the
-  satellite-casino closures.
-- **Hotels are full.** Occupancy has averaged 98–99% at The Venetian, The Parisian and Sands Macao since
-  2Q25, so a complimentary room there usually displaces a paying guest.
+  comps and commissions) rose from 20.5% to 23.5%, roughly US$226m a year **[D]**. This is a proxy, not
+  an internal ledger.
+- **Margins compressed, partly across the market.** On a *directional* comparison (peer definitions
+  differ: EBITDA vs EBITDAR), Sands' five-property margin fell 4.2 points while Wynn, MGM and Melco moved
+  by −2.6 to +0.2 points **[D from P LVS-ER, WYNN/MGM/MELCO-ER]**. Sands' 3Q26 five-property margin of 27.8%
+  (27.3% including ferry and other operations **[P LVS-ER-2026-10-21]**) is at or above those peers. The
+  relative gap of about −2.8 points **[D]** also reflects the Londoner ramp, room renovations and the
+  satellite-casino closures **[U PR-SATELLITE-2026]**.
+- **Hotels are full.** Occupancy averaged 98–99% at The Venetian, The Parisian and Sands Macao since 2Q25
+  **[P LVS-ER hotel statistics]**, so a complimentary room there usually displaces a paying guest.
 
 ### Why the answer needs a test, not a model
 
-With a ~40% gaming tax, a dollar of reinvestment must create about **$2 of incremental GGR** to break
-even (about $1.2 if promotional play reduces taxable GGR, which needs confirming). Depending on how much
-of the share gain can be attributed to reinvestment, public data implies an average return between 0.4× and 2.1×
-of cost. That range straddles break-even, so the public numbers cannot settle the question.
+Assuming a 40% gaming tax and 10% variable cost, a dollar of reinvestment must create about **$2 of
+incremental GGR** to break even, or about $1.2 if promotional play reduces taxable GGR, which needs
+confirming **[I]**. Depending on how much of the share gain can be attributed to reinvestment, public data
+implies an *average* (not marginal) return between 0.4× and 2.1× of cost **[D + I]**. That range straddles
+break-even, so the public numbers cannot settle the question.
 
-Independent research on real casino data finds that established players often respond little to changes
-in free play (Lucas & Spilde, 2017 and 2024), while operators such as Harrah's built their marketing
-around control-group testing. These US results do not transfer directly to Macao's baccarat-led market,
-but the testing discipline does.
+Peer-reviewed studies on real US casino data find that established players often respond little to changes
+in free play **[R LIT-LUCAS-2017, LIT-LUCAS-2024]**, and Harrah's built its marketing around control-group
+testing **[R LIT-LOVEMAN-2003]**. Those results come from slot-based US markets and do not transfer
+directly to Macao's baccarat-led market, but the testing discipline does.
 
 ### A practical next step management could evaluate
 
-| | |
+| Element **[I: design proposal]** | |
 |---|---|
 | **Action** | A 12-week randomised holdout: 5–10% of players in each property × mass-tier cell receive a −30% or a reallocated offer, plus a room-comp vs non-room-reward test on forecast sell-out nights |
 | **Owners** | Casino Marketing and FP&A; Hotel Revenue Management for the room test; Compliance sign-off |
@@ -60,6 +66,3 @@ increment becomes evidence-based. If not, the savings can be redirected to the c
 Player-trip theoretical win, offers issued and redeemed, night-level comp and cash room data, and a
 breakdown of net-to-gross deductions. With those, the analysis pipeline, already built and validated on
 synthetic data, could produce cell-level estimates within weeks.
-
-*Sources: LVS Form 8-K earnings releases (2023–2026); DICJ quarterly statistics; Wynn, MGM and Melco
-earnings releases; Loveman (HBR, 2003); Lucas & Spilde (2017, 2024); Metters et al. (Interfaces, 2008).*

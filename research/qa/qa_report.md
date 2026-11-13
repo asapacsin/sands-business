@@ -1,6 +1,6 @@
 # QA report (T22)
 
-Checks: 37; failed: 0
+Checks: 45; failed: 0
 
 | Check | Result | Detail |
 |---|---|---|
@@ -14,7 +14,15 @@ Checks: 37; failed: 0
 | A: no implied internal access | PASS |  |
 | B: independence statement present | PASS |  |
 | B: no implied internal access | PASS |  |
-| A: illustrative values labelled | PASS | count=5 |
+| A: every figure-bearing block has an evidence tag | PASS | [] |
+| B: every figure-bearing block has an evidence tag | PASS | [] |
+| D: every figure-bearing block has an evidence tag | PASS | [] |
+| all cited source IDs exist in source register | PASS | [] |
+| A: peer margin comparison labelled 'directional' | PASS |  |
+| A: illustrative defined as 'not a Sands figure' | PASS |  |
+| B: peer margin comparison labelled 'directional' | PASS |  |
+| B: illustrative defined as 'not a Sands figure' | PASS |  |
+| A: illustrative values labelled | PASS | count=4 |
 | A: uses term 'GGR' | PASS |  |
 | A: uses term 'net revenue' | PASS |  |
 | A: uses term 'EBITDA' | PASS |  |

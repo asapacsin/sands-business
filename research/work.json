@@ -335,7 +335,7 @@
         "T21"
       ],
       "evidence": [
-        "qa/qa_check.py: 37/37 checks pass",
+        "qa/qa_check.py: 45/45 checks pass incl. per-block evidence tags and source-ID resolution",
         "qa/qa_report.md"
       ]
     },
