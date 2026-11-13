@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Document type | Execution-ready research specification (**not** the research report) |
-| Version / date | v1.0 — 2026-11-13 |
+| Version / date | v1.2 — 2026-11-13 (v1.1: regulation correction from T07; v1.2: break-even formula correction from T13) |
 | Author status | Independent external research using public information only. No affiliation with, access to, or endorsement by Sands China Ltd. or Las Vegas Sands Corp. |
 | Latest public period in scope | Q3 2026 (quarter ended 30 Sep 2026), released by Las Vegas Sands around 21–22 Oct 2026 |
 | Task registry | [`research/work.json`](work.json) (machine-readable backlog, validated by `scripts/frontier.py`) |
@@ -136,7 +136,7 @@ Why the others are not primary: D3 depends heavily on internal ramp plans; D4 is
 | H3 | Margin compression is **heterogeneous across properties** beyond what revenue changes imply, so allocation matters more than the total level | Public property tables (T09) | Property margins move together within ±150 bps of the portfolio |
 | H4 | On high-occupancy nights at specific properties, complimentary rooms displace cash revenue, so their true cost exceeds marginal cost | Public occupancy and ADR (T10); internal night-level data for confirmation | Occupancy is well below sell-out at all properties |
 | H5 | A material share of reinvestment given to established mass players is **non-incremental**, consistent with peer-reviewed findings of insensitivity to free play | **Internal only**: randomized holdout (T20) | The holdout shows incremental theo-win ≥ break-even multiple |
-| H6 | Because roughly 40% of GGR goes to gaming tax `[TO-VERIFY]`, the break-even incremental GGR per $1 of reinvestment is around 1.7–1.9× `[DERIVED from TO-VERIFY]`, higher than the 1.0× intuition | Arithmetic (T13); tax treatment of promotional play must be verified | Verified tax treatment changes the wedge materially |
+| H6 | Because roughly 40% of GGR goes to gaming tax `[TO-VERIFY]`, the break-even incremental GGR per $1 of reinvestment is around 1.8–2.5× (1.1–1.5× if promotional play reduces taxable GGR) `[DERIVED]`, higher than the 1.0× intuition | Arithmetic (T13); tax treatment of promotional play must be verified | Verified tax treatment changes the wedge materially |
 
 ---
 
@@ -213,7 +213,7 @@ Rule: community content is coded as **qualitative practitioner evidence (E5)**. 
 | Visitor arrivals by origin, length of stay, per-capita spending | DSEC (dsec.gov.mo, reachable 2026-11-13) | Monthly / quarterly | Demand drivers; confounders |
 | Hotel occupancy, guests, room supply | DSEC / MGTO Data+ (dataplus.macaotourism.gov.mo, reachable) | Monthly | Market occupancy for H4 |
 | Gaming tax receipts | DSF / press summaries ([AGBrief](https://agbrief.com/news/macau/11/03/2026/macau-gaming-tax-climbs-7-63-to-11-9b-in-2025/)) | Annual | Cross-check effective tax rate |
-| Regulation | Law 16/2022 (gaming law amendments, concessions from 2023) `[TO-VERIFY]`; Law 7/2024 on illegal gambling `[TO-VERIFY]`; Personal Data Protection Act (Law 8/2005) `[TO-VERIFY]`; DICJ instructions on promotions, credit and responsible gambling | — | Constraints in §9 |
+| Regulation | Law 16/2022 (gaming law amendments, concessions from 2023) `[TO-VERIFY]`; Law 7/2024 (gaming credit regime) and Law 20/2024 (illegal gambling) `[SECONDARY ✔]` — corrected in v1.1, see notes/macau_context.md; Personal Data Protection Act (Law 8/2005) `[TO-VERIFY]`; DICJ instructions on promotions, credit and responsible gambling | — | Constraints in §9 |
 
 ### 6.3 Metrics to compile (comparable-definition register)
 
@@ -314,8 +314,8 @@ For a reinvestment offer *o* to customer segment *s* at property *p*:
 - Measure ΔGGR as **incremental theoretical win**, not actual win, to remove hold noise. It is estimated against a counterfactual: holdout group or forecast.
 - τ = effective gaming tax rate on GGR (35% special tax + ~4–5% levies ≈ 39–40% `[TO-VERIFY under Law 16/2022]`). Whether and how promotional play reduces taxable GGR must be verified; it changes the wedge.
 - **Break-even multiple** (H6): incremental GGR required per $1 of reinvestment
-  `k* = 1 / [ (1 − τ) · (1 − v) ]`, where v = variable-cost share of incremental win.
-  `[ILLUSTRATIVE]` τ = 0.40, v = 0.10 → k* ≈ 1.85. A $1 promotion breaks even only if it creates ≈ $1.85 of *incremental* GGR.
+  `k* = c_promo / (1 − τ − v)`, where v = variable cost as a share of incremental GGR and c_promo = 1 (or 1 − τ if promotional play reduces taxable GGR).
+  `[ILLUSTRATIVE]` τ = 0.40, v = 0.10 → k* = 2.0 (1.2 if promotional play is tax-deductible). A $1 promotion breaks even only if it creates ≈ $2 of *incremental* GGR. (v1.2 correction: v1.0 applied v multiplicatively and stated 1.85.)
 - **Comp room opportunity cost** for room-night r:
   `OC_room = P(sellout_r) · (ADR_cash,r − c_var) + (1 − P(sellout_r)) · c_var`
   where c_var is the marginal cost of an occupied room. When the hotel is full, the cost is close to lost cash ADR; when it is not, the cost is near housekeeping and amenities.
@@ -336,7 +336,7 @@ Value of 1 pt mass share ≈ Market mass GGR × 1% × (1 − τ) × (1 − v)
 Observed cost ≈ Δ(adjusted EBITDA vs peer-implied counterfactual) between periods
 Implied payback = observed cost / value of share points gained
 ```
-`[ILLUSTRATIVE]`: if mass GGR ≈ 73% × US$30.9bn ≈ US$22.6bn/yr, 1 pt ≈ US$226m GGR, ≈ US$122m after τ = 0.40 and v = 0.10, before reinvestment cost. The final model must recompute this from verified inputs.
+`[ILLUSTRATIVE]`: if mass GGR ≈ 73% × US$30.9bn ≈ US$22.6bn/yr, 1 pt ≈ US$226m GGR, ≈ US$113m after τ = 0.40 and v = 0.10 (additive), before reinvestment cost. The final model must recompute this from verified inputs.
 
 **Scenarios** (all labelled illustrative, not Sands forecasts):
 
@@ -452,7 +452,7 @@ Page 1: the question, why it matters now (3 verified facts), what the public evi
 1. "Couldn't the margin decline simply be the Londoner ramp or bad hold?"
 2. "Why theo instead of actual win?"
 3. "How do you know free play isn't incremental at Sands specifically?"
-4. "Walk me through why break-even is ~1.85× and not 1×."
+4. "Walk me through why break-even is ~2× and not 1×."
 5. "How would you size the holdout without hurting revenue?"
 6. "What if competitors respond to a pull-back?"
 7. "What does Macau privacy law change about your plan?"

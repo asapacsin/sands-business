@@ -1,0 +1,60 @@
+operator,period,net_revenue_usd_m,ebitda_usd_m,margin_pct,definition,source_id
+melco,2023Q1,524.3,113.5,21.65,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2023-05-11
+melco,2023Q2,771.5,206.6,26.78,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2023-08-02
+melco,2023Q3,808.1,217.8,26.95,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2023-11-08
+melco,2023Q4,895.9,243.8,27.21,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2024-03-01
+melco,2024Q1,916.5,242.9,26.5,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2024-05-02
+melco,2024Q3,959.1,254.5,26.54,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2024-11-06
+melco,2024Q4,964.3,221.0,22.92,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2025-02-28
+melco,2025Q1,1040.5,292.5,28.11,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2025-05-09
+melco,2025Q2,1127.0,331.6,29.42,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2025-08-01
+melco,2025Q3,1073.5,310.9,28.96,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2025-11-07
+melco,2025Q4,1081.4,276.8,25.6,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2026-02-13
+melco,2026Q1,1164.7,330.2,28.35,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2026-05-04
+melco,2026Q2,1037.6,245.5,23.66,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2026-08-14
+melco,2026Q3,943.7,220.6,23.38,Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira),MELCO-ER-2026-11-05
+mgm,2023Q1,617.6,168.9,27.36,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2023-05-01
+mgm,2023Q2,741.0,209.4,28.26,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2023-08-02
+mgm,2023Q3,812.5,226.1,27.83,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2023-11-08
+mgm,2023Q4,982.5,262.4,26.71,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2024-02-13
+mgm,2024Q1,1056.0,301.2,28.52,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2024-05-01
+mgm,2024Q2,1018.2,293.9,28.86,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2024-07-31
+mgm,2024Q3,929.5,237.4,25.54,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2024-10-30
+mgm,2024Q4,1018.7,254.7,25.0,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2025-02-12
+mgm,2025Q1,1027.5,285.6,27.79,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2025-04-30
+mgm,2025Q2,1110.1,301.3,27.15,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2025-07-30
+mgm,2025Q3,1087.7,284.0,26.11,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2025-10-29
+mgm,2025Q4,1236.5,332.3,26.88,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-02-05
+mgm,2026Q1,1122.0,273.5,24.37,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-04-29
+mgm,2026Q2,1100.9,256.7,23.32,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-07-29
+mgm,2026Q3,1138.2,264.0,23.19,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-10-28
+sands,2023Q1,1261.0,397.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2023Q2,1601.0,535.0,33.42,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2023Q3,1760.0,626.0,35.57,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2023Q4,1832.0,648.0,35.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2024Q1,1781.0,605.0,33.97,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2024Q2,1724.0,558.0,32.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2024Q3,1740.0,581.0,33.39,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2024Q4,1737.0,566.0,32.58,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2025Q1,1677.0,528.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2025Q2,1764.0,560.0,31.75,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2025Q3,1874.0,596.0,31.8,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2025Q4,2024.0,602.0,29.74,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2026Q1,2076.0,630.0,30.35,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2026Q2,1751.0,426.0,24.33,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2026Q3,1902.0,528.0,27.76,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+wynn,2023Q1,600.1,155.8,25.96,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-05-09
+wynn,2023Q2,770.0,246.2,31.97,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-08-09
+wynn,2023Q3,819.8,254.9,31.09,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-11-09
+wynn,2023Q4,910.6,296.9,32.6,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2024-02-07
+wynn,2024Q1,998.6,339.6,34.01,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2024-05-07
+wynn,2024Q2,885.3,280.4,31.67,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2024-08-06
+wynn,2024Q3,871.8,262.9,30.16,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2024-11-04
+wynn,2024Q4,926.6,292.8,31.6,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2025-02-13
+wynn,2025Q1,865.9,252.1,29.11,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2025-05-06
+wynn,2025Q2,883.4,253.7,28.72,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2025-08-07
+wynn,2025Q3,1001.0,308.3,30.8,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2025-11-06
+wynn,2025Q4,967.7,270.9,27.99,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2026-02-12
+wynn,2026Q1,989.2,279.4,28.25,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2026-05-07
+wynn,2026Q2,1004.5,297.0,29.57,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2026-08-04
+wynn,2026Q3,919.2,255.3,27.77,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2026-11-05

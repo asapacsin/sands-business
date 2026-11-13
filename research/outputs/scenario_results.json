@@ -1,0 +1,156 @@
+{
+  "label": "ILLUSTRATIVE - not Sands forecasts",
+  "pool_usd_m_yr": 226.0,
+  "property_weight": {
+    "Londoner": 0.365,
+    "Parisian": 0.128,
+    "Plaza_FourSeasons": 0.1,
+    "SandsMacao": 0.057,
+    "Venetian": 0.35
+  },
+  "scenarios": {
+    "baseline_bau": {
+      "contribution_bau": -0.0,
+      "contribution": -0.0,
+      "delta_vs_bau": 0.0,
+      "ggr_bau": 452.0,
+      "ggr": 452.0,
+      "share_guardrail_ok": true,
+      "reallocation_fraction": 0.0,
+      "dispersion": 1.0
+    },
+    "conservative": {
+      "contribution_bau": -0.0,
+      "contribution": 0.4,
+      "delta_vs_bau": 0.4,
+      "ggr_bau": 452.0,
+      "ggr": 452.7,
+      "share_guardrail_ok": true,
+      "reallocation_fraction": 0.1,
+      "dispersion": 0.5
+    },
+    "expected": {
+      "contribution_bau": -0.0,
+      "contribution": 2.6,
+      "delta_vs_bau": 2.6,
+      "ggr_bau": 452.0,
+      "ggr": 457.2,
+      "share_guardrail_ok": true,
+      "reallocation_fraction": 0.2,
+      "dispersion": 1.0
+    },
+    "optimistic": {
+      "contribution_bau": -0.0,
+      "contribution": 8.1,
+      "delta_vs_bau": 8.1,
+      "ggr_bau": 452.0,
+      "ggr": 468.3,
+      "share_guardrail_ok": true,
+      "reallocation_fraction": 0.3,
+      "dispersion": 1.5
+    }
+  },
+  "marginal_at_bau": {
+    "Londoner|established_rated_mass": 0.54,
+    "Londoner|lapsed_or_new_mass": 1.57,
+    "Londoner|premium_mass": 0.96,
+    "Parisian|established_rated_mass": 0.54,
+    "Parisian|lapsed_or_new_mass": 1.57,
+    "Parisian|premium_mass": 0.96,
+    "Plaza_FourSeasons|established_rated_mass": 0.54,
+    "Plaza_FourSeasons|lapsed_or_new_mass": 1.57,
+    "Plaza_FourSeasons|premium_mass": 0.96,
+    "SandsMacao|established_rated_mass": 0.54,
+    "SandsMacao|lapsed_or_new_mass": 1.57,
+    "SandsMacao|premium_mass": 0.96,
+    "Venetian|established_rated_mass": 0.54,
+    "Venetian|lapsed_or_new_mass": 1.57,
+    "Venetian|premium_mass": 0.96
+  },
+  "cells_below_break_even_at_bau": 15,
+  "break_even_multiple": 2.0,
+  "optimal_pool_curve": [
+    {
+      "pool_fraction": 0.25,
+      "contribution": 55.6
+    },
+    {
+      "pool_fraction": 0.5,
+      "contribution": 55.0
+    },
+    {
+      "pool_fraction": 0.75,
+      "contribution": 36.9
+    },
+    {
+      "pool_fraction": 1.0,
+      "contribution": 6.8
+    },
+    {
+      "pool_fraction": 1.25,
+      "contribution": -31.5
+    }
+  ],
+  "sensitivity": [
+    {
+      "parameter": "tau",
+      "low": 0.35,
+      "high": 0.4,
+      "delta_low": 2.9,
+      "bau_level_low": 22.6,
+      "delta_high": 2.6,
+      "bau_level_high": -0.0
+    },
+    {
+      "parameter": "v",
+      "low": 0.05,
+      "high": 0.2,
+      "delta_low": 2.9,
+      "bau_level_low": 22.6,
+      "delta_high": 2.1,
+      "bau_level_high": -45.2
+    },
+    {
+      "parameter": "pool_avg_ggr_per_dollar",
+      "low": 0.72,
+      "high": 4.28,
+      "delta_low": 0.9,
+      "bau_level_low": -144.6,
+      "delta_high": 5.6,
+      "bau_level_high": 257.6
+    },
+    {
+      "parameter": "curvature_b",
+      "low": 0.5,
+      "high": 3.0,
+      "delta_low": 13.9,
+      "bau_level_low": -0.0,
+      "delta_high": 0.5,
+      "bau_level_high": -0.0
+    },
+    {
+      "parameter": "tier_dispersion",
+      "low": 0.5,
+      "high": 1.5,
+      "delta_low": 0.7,
+      "bau_level_low": -0.0,
+      "delta_high": 5.8,
+      "bau_level_high": -0.0
+    },
+    {
+      "parameter": "promo_tax_deductible",
+      "low": false,
+      "high": true,
+      "delta_low": 2.6,
+      "bau_level_low": -0.0,
+      "delta_high": 2.6,
+      "bau_level_high": 90.4
+    }
+  ],
+  "sign_flips_bau_level": [
+    "tau",
+    "v",
+    "pool_avg_ggr_per_dollar",
+    "promo_tax_deductible"
+  ]
+}

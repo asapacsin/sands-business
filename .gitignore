@@ -7,3 +7,5 @@ __pycache__/
 *.log
 
 .frontier-state.json
+# raw downloaded filings: hashes and URLs are in research/sources/source_register.csv
+research/data/raw/

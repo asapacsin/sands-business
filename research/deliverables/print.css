@@ -1,0 +1,13 @@
+body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; line-height: 1.38; color: #1a1a1a; max-width: none; margin: 0; padding: 0; background: #fff; }
+h1.title { font-size: 18pt; margin: 0 0 2pt; color: #1f4e79; }
+p.subtitle { font-size: 11pt; margin: 0 0 2pt; color: #444; }
+p.date { font-size: 9pt; color: #666; margin: 0 0 10pt; }
+h2 { font-size: 12.5pt; color: #1f4e79; border-bottom: 1px solid #c9d6e3; padding-bottom: 2pt; margin: 14pt 0 6pt; }
+h3 { font-size: 10.5pt; margin: 10pt 0 4pt; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 8pt; font-size: 8.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #d0d7de; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+th { background: #eef3f8; }
+blockquote { margin: 6pt 0; padding: 6pt 10pt; background: #f5f7fa; border-left: 3px solid #1f4e79; font-size: 8.8pt; }
+img { max-width: 92%; display: block; margin: 6pt auto; page-break-inside: avoid; }
+code { font-size: 8.5pt; }
+header#title-block-header { margin-bottom: 4pt; }

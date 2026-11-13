@@ -1,0 +1,107 @@
+"""T22 — automated evidence QA for Deliverables A, B, D (spec §13). Exit 0 only if every check passes.
+Writes qa/qa_report.md."""
+from __future__ import annotations
+
+import csv
+import random
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "analysis"))
+from lvs_extract import METRICS, to_text  # noqa: E402
+
+A = (ROOT / "deliverables/A_report.md").read_text()
+B = (ROOT / "deliverables/B_brief.md").read_text()
+D = (ROOT / "deliverables/D_interview.md").read_text()
+results: list[tuple[str, bool, str]] = []
+
+
+def check(name: str, ok: bool, detail: str = "") -> None:
+    results.append((name, ok, detail))
+
+
+# 1. No unverified tags left in outward-facing deliverables
+for label, text in (("A", A), ("B", B)):
+    bad = re.findall(r"\[(?:TO-VERIFY|SECONDARY ✔)\]", text)
+    check(f"{label}: no TO-VERIFY / SECONDARY tags", not bad, str(bad))
+
+# 2. Causal and accusatory language scan (A, B)
+CAUSAL = r"\b(caused|proved|proves|drove|drives the decline)\b"
+ACCUSE = r"(mismanag|poor management|should have|failed to|failure of management|wasteful|inefficient spending)"
+for label, text in (("A", A), ("B", B)):
+    c = [m.group(0) for m in re.finditer(CAUSAL, text, re.I)]
+    check(f"{label}: no unsupported causal verbs", not c, str(c))
+    x = [m.group(0) for m in re.finditer(ACCUSE, text, re.I)]
+    check(f"{label}: no accusatory language", not x, str(x))
+
+# 3. Affiliation / internal-access boundaries
+for label, text in (("A", A), ("B", B)):
+    check(f"{label}: independence statement present", bool(re.search(r"no (internal|affiliation)", text, re.I)))
+    check(f"{label}: no implied internal access", not re.search(r"\b(our data|internal sources told|confidential)\b", text, re.I))
+
+# 4. Illustrative labelling
+check("A: illustrative values labelled", A.lower().count("illustrative") >= 4, f"count={A.lower().count('illustrative')}")
+
+# 5. Glossary-level distinctions present
+for term in ("GGR", "net revenue", "EBITDA", "contribution"):
+    check(f"A: uses term '{term}'", term.lower() in A.lower())
+
+# 6. Required figures exist and are referenced
+for f in ("F1_share_vs_margin", "F2_net_to_gross_gap", "F3_property_margins", "F5_hotel_kpis",
+          "F6_break_even", "F7_scenarios", "F8_tornado"):
+    check(f"figure {f} exists and is referenced", (ROOT / f"outputs/figures/{f}.png").exists() and f in A)
+
+# 7. Length budgets (≈ 500 words/page text; figures add pages)
+def pdf_pages(name: str) -> int:
+    pdf = ROOT / f"deliverables/{name}.pdf"
+    return len(re.findall(rb"/Type\s*/Page[^s]", pdf.read_bytes())) if pdf.exists() else -1
+
+
+check("A: 8–12 rendered pages (PDF)", 8 <= pdf_pages("A_report") <= 12, f"pages={pdf_pages('A_report')}")
+check("B: ≤ 2 rendered pages (PDF)", 1 <= pdf_pages("B_brief") <= 2, f"pages={pdf_pages('B_brief')}")
+check("D: 8 questions", len(re.findall(r"^\*\*\d+\.", D, re.M)) == 8)
+
+# 8. Headline numbers in B also appear in A (traceability)
+for token in ("22.4%", "25.4%", "20.5%", "23.5%", "US$226m", "4.2 points", "27.8%", "0.4", "2.1", "98"):
+    check(f"B number '{token}' traceable to A", token in A)
+
+# 9. Fact verification: no CORRECTED/unresolved facts used as-is
+facts = list(csv.DictReader(open(ROOT / "sources/fact_verification.csv")))
+check("all spec facts resolved", all(r["status"] for r in facts), f"{len(facts)} facts")
+
+# 10. Independent re-extraction of a random 20% of property-quarter values from raw filings
+rows = [r for r in csv.DictReader(open(ROOT / "data/processed/property_quarter.csv")) if r["basis"] == "reported"]
+random.seed(20261113)
+sample = random.sample(rows, k=max(1, len(rows) // 5))
+names = {"Venetian": "The Venetian Macao", "Londoner": "The Londoner Macao", "Parisian": "The Parisian Macao",
+         "Plaza_FourSeasons": "The Plaza Macao and Four Seasons", "SandsMacao": "Sands Macao"}
+labels = {k: lbl for lbl, k, _ in METRICS}
+cache: dict[str, str] = {}
+misses = []
+for r in sample:
+    path = ROOT / f"data/raw/lvs/{r['source_id'][7:]}_ex991.htm"
+    text = cache.setdefault(str(path), to_text(path).replace("\n", " "))
+    start = text.find(f"| {names[r['property']]}")
+    blocks = [m.start() for m in re.finditer(re.escape(names[r["property"]]) + r"[^|]*\| (March|June|September|December) \d", text)]
+    v = float(r["value"])
+    fmt = [f"{v:,.0f}", f"{v:.1f}", f"{v:.2f}", f"{v:.0f}"]
+    if v < 0:
+        fmt += [f"({abs(v):,.0f})", f"({abs(v):.1f})", f"({abs(v):.2f})"]
+    if v == 0:
+        fmt += ["—"]
+    found = any(any(f" {f} " in text[b:b + 2600] for f in fmt) for b in blocks)
+    if not found:
+        misses.append((r["property"], r["period"], r["metric"], r["value"]))
+check(f"re-extraction of {len(sample)} sampled values (20%)", not misses, str(misses[:5]))
+
+lines = ["# QA report (T22)", "", f"Checks: {len(results)}; failed: {sum(not ok for _, ok, _ in results)}", "",
+         "| Check | Result | Detail |", "|---|---|---|"]
+lines += [f"| {n} | {'PASS' if ok else 'FAIL'} | {d.replace('|', '/')[:120]} |" for n, ok, d in results]
+(ROOT / "qa/qa_report.md").write_text("\n".join(lines) + "\n")
+for n, ok, d in results:
+    if not ok:
+        print("FAIL:", n, d)
+print(f"{len(results)} checks, {sum(not ok for _, ok, _ in results)} failed")
+sys.exit(0 if all(ok for _, ok, _ in results) else 1)

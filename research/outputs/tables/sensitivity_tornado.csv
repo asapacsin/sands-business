@@ -1,0 +1,7 @@
+parameter,low,high,delta_low,bau_level_low,delta_high,bau_level_high
+tau,0.35,0.4,2.9,22.6,2.6,-0.0
+v,0.05,0.2,2.9,22.6,2.1,-45.2
+pool_avg_ggr_per_dollar,0.72,4.28,0.9,-144.6,5.6,257.6
+curvature_b,0.5,3.0,13.9,-0.0,0.5,-0.0
+tier_dispersion,0.5,1.5,0.7,-0.0,5.8,-0.0
+promo_tax_deductible,False,True,2.6,-0.0,2.6,90.4

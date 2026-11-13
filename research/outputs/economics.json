@@ -1,0 +1,80 @@
+{
+  "label": "DERIVED + ILLUSTRATIVE; average (not marginal) returns; not causal",
+  "break_even_multiple": {
+    "tau0.35_v0.05_promoTaxDeductibleFalse": 1.67,
+    "tau0.35_v0.05_promoTaxDeductibleTrue": 1.08,
+    "tau0.35_v0.1_promoTaxDeductibleFalse": 1.82,
+    "tau0.35_v0.1_promoTaxDeductibleTrue": 1.18,
+    "tau0.35_v0.2_promoTaxDeductibleFalse": 2.22,
+    "tau0.35_v0.2_promoTaxDeductibleTrue": 1.44,
+    "tau0.4_v0.05_promoTaxDeductibleFalse": 1.82,
+    "tau0.4_v0.05_promoTaxDeductibleTrue": 1.09,
+    "tau0.4_v0.1_promoTaxDeductibleFalse": 2.0,
+    "tau0.4_v0.1_promoTaxDeductibleTrue": 1.2,
+    "tau0.4_v0.2_promoTaxDeductibleFalse": 2.5,
+    "tau0.4_v0.2_promoTaxDeductibleTrue": 1.5
+  },
+  "public_anchor": {
+    "company_definition_attr1.0": {
+      "share_gain_pts": 2.5,
+      "attribution": 1.0,
+      "incremental_ggr_usd_m_yr": 539,
+      "contribution_before_promo_usd_m_yr": 270,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 1.19,
+      "net_contribution_usd_m_yr": 44
+    },
+    "company_definition_attr0.5": {
+      "share_gain_pts": 2.5,
+      "attribution": 0.5,
+      "incremental_ggr_usd_m_yr": 270,
+      "contribution_before_promo_usd_m_yr": 135,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 0.6,
+      "net_contribution_usd_m_yr": -91
+    },
+    "company_definition_attr0.3": {
+      "share_gain_pts": 2.5,
+      "attribution": 0.3,
+      "incremental_ggr_usd_m_yr": 162,
+      "contribution_before_promo_usd_m_yr": 81,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 0.36,
+      "net_contribution_usd_m_yr": -145
+    },
+    "derived_index_attr1.0": {
+      "share_gain_pts": 4.49,
+      "attribution": 1.0,
+      "incremental_ggr_usd_m_yr": 968,
+      "contribution_before_promo_usd_m_yr": 484,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 2.14,
+      "net_contribution_usd_m_yr": 258
+    },
+    "derived_index_attr0.5": {
+      "share_gain_pts": 4.49,
+      "attribution": 0.5,
+      "incremental_ggr_usd_m_yr": 484,
+      "contribution_before_promo_usd_m_yr": 242,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 1.07,
+      "net_contribution_usd_m_yr": 16
+    },
+    "derived_index_attr0.3": {
+      "share_gain_pts": 4.49,
+      "attribution": 0.3,
+      "incremental_ggr_usd_m_yr": 290,
+      "contribution_before_promo_usd_m_yr": 145,
+      "incremental_deductions_usd_m_yr": 226,
+      "average_return_multiple": 0.64,
+      "net_contribution_usd_m_yr": -81
+    }
+  },
+  "comp_room_opportunity_cost_usd_per_night": {
+    "Venetian": 135.0,
+    "Londoner": 150.0,
+    "Parisian": 94.0,
+    "Plaza_FourSeasons": 211.0,
+    "SandsMacao": 113.0
+  }
+}

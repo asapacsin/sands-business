@@ -1,0 +1,24 @@
+{
+  "label": "SYNTHETIC DATA \u2014 demonstrates the pipeline only",
+  "single_run": {
+    "effect_per_player": 19.811762037017896,
+    "se": 6.096624991097945,
+    "ci90": [
+      9.783706308247455,
+      29.83981776578834
+    ]
+  },
+  "coverage_reduced_offer_profitable": {
+    "true_effect": 25.0,
+    "ci90_coverage": 0.912,
+    "adopt_rate": 0.998,
+    "runs": 500
+  },
+  "coverage_reduced_offer_unprofitable": {
+    "true_effect": -20.0,
+    "ci90_coverage": 0.912,
+    "adopt_rate": 0.0,
+    "runs": 500
+  },
+  "mde_example": 26.75
+}

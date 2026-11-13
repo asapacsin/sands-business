@@ -1,0 +1,210 @@
+{
+  "evidence_label": "DERIVED from LVS-ER, peer ERs, DICJ; descriptive",
+  "bridge_2026Q3": {
+    "Venetian": {
+      "d_net_revenue": -43.0,
+      "d_adj_property_ebitda": -37.0,
+      "d_margin_pts": -3.4,
+      "ebitda_from_margin_change": -22.0
+    },
+    "Londoner": {
+      "d_net_revenue": -1.0,
+      "d_adj_property_ebitda": -41.0,
+      "d_margin_pts": -5.9,
+      "ebitda_from_margin_change": -40.7
+    },
+    "Parisian": {
+      "d_net_revenue": 13.0,
+      "d_adj_property_ebitda": -7.0,
+      "d_margin_pts": -4.4,
+      "ebitda_from_margin_change": -10.2
+    },
+    "Plaza_FourSeasons": {
+      "d_net_revenue": 32.0,
+      "d_adj_property_ebitda": 11.0,
+      "d_margin_pts": -0.2,
+      "ebitda_from_margin_change": -0.5
+    },
+    "SandsMacao": {
+      "d_net_revenue": 27.0,
+      "d_adj_property_ebitda": 6.0,
+      "d_margin_pts": 3.0,
+      "ebitda_from_margin_change": 3.0
+    }
+  },
+  "property_margin_pre_post": {
+    "Londoner": {
+      "pre": 28.9,
+      "post": 29.2,
+      "change": 0.3
+    },
+    "Parisian": {
+      "pre": 30.7,
+      "post": 21.3,
+      "change": -9.4
+    },
+    "Plaza_FourSeasons": {
+      "pre": 36.0,
+      "post": 32.8,
+      "change": -3.1
+    },
+    "SandsMacao": {
+      "pre": 17.7,
+      "post": 10.7,
+      "change": -6.9
+    },
+    "Venetian": {
+      "pre": 38.6,
+      "post": 32.7,
+      "change": -5.9
+    }
+  },
+  "hotel_recent": {
+    "Venetian": {
+      "occupancy_mean_post": 98.5,
+      "occupancy_min_post": 98.0,
+      "adr_mean_post": 199.0
+    },
+    "Londoner": {
+      "occupancy_mean_post": 96.6,
+      "occupancy_min_post": 93.3,
+      "adr_mean_post": 264.0
+    },
+    "Parisian": {
+      "occupancy_mean_post": 98.3,
+      "occupancy_min_post": 97.0,
+      "adr_mean_post": 147.0
+    },
+    "Plaza_FourSeasons": {
+      "occupancy_mean_post": 94.4,
+      "occupancy_min_post": 92.1,
+      "adr_mean_post": 507.0
+    },
+    "SandsMacao": {
+      "occupancy_mean_post": 99.1,
+      "occupancy_min_post": 98.4,
+      "adr_mean_post": 166.0
+    }
+  },
+  "net_to_gross": {
+    "pre_mean_pct": 20.51,
+    "post_mean_pct": 23.49,
+    "change_pts": 2.98,
+    "post_period_gross_win_usd_m": 11370.0,
+    "implied_extra_deductions_usd_m_post_period": 339.0,
+    "implied_extra_deductions_usd_m_annualised": 226.0,
+    "caveat": "Gap = implied gross win minus net casino revenue. It contains rebates, commissions, discounts, loyalty deferrals and comps allocated to other departments - not promotions alone. Gross win is approximated from drop x win% (LVS 'non-rolling win %' is calculated on drop).",
+    "by_property_pre_post": {
+      "Venetian": [
+        15.0,
+        17.5
+      ],
+      "Londoner": [
+        23.9,
+        26.7
+      ],
+      "Parisian": [
+        18.5,
+        21.4
+      ],
+      "Plaza_FourSeasons": [
+        36.9,
+        36.5
+      ],
+      "SandsMacao": [
+        13.5,
+        16.9
+      ]
+    }
+  },
+  "margin_did": {
+    "definition": "Change in mean EBITDA(R) margin, post (2025Q2-2026Q3) minus pre (2023Q3-2025Q1); Sands minus mean of peers",
+    "sands_change_pts": -4.24,
+    "peer_changes_pts": {
+      "wynn": -2.61,
+      "mgm": -2.01,
+      "melco": 0.19
+    },
+    "did_pts": -2.77,
+    "did_hold_adjusted_sands_pts": -2.84,
+    "leave_one_out": {
+      "without_wynn": -3.34,
+      "without_mgm": -3.03,
+      "without_melco": -1.93
+    },
+    "did_excluding_2026Q2_pts": -2.04,
+    "hold_adjustment_available_quarters": [
+      "2024Q1",
+      "2024Q2",
+      "2024Q3",
+      "2025Q1",
+      "2025Q2",
+      "2025Q3",
+      "2025Q4",
+      "2026Q1",
+      "2026Q2",
+      "2026Q3"
+    ],
+    "placebo_did_pts": {
+      "2024Q2": -0.85,
+      "2024Q3": -0.19,
+      "2024Q4": -0.41
+    },
+    "identification": "Weak: 3 donors with different EBITDA vs EBITDAR definitions; treatment coincides with Londoner room-inventory return (mid-2025) and satellite-casino closures (end-2025)."
+  },
+  "tradeoff_vs_2025Q1": [
+    {
+      "period": "2025Q2",
+      "d_mass_share_index_pts": 1.09,
+      "d_margin_vs_peers_pts": 0.18,
+      "d_margin_hold_adj_vs_peers_pts": -0.83,
+      "d_gap_pts": 0.37
+    },
+    {
+      "period": "2025Q3",
+      "d_mass_share_index_pts": 2.81,
+      "d_margin_vs_peers_pts": 0.03,
+      "d_margin_hold_adj_vs_peers_pts": -0.67,
+      "d_gap_pts": 1.12
+    },
+    {
+      "period": "2025Q4",
+      "d_mass_share_index_pts": 3.63,
+      "d_margin_vs_peers_pts": -0.23,
+      "d_margin_hold_adj_vs_peers_pts": -2.11,
+      "d_gap_pts": 2.75
+    },
+    {
+      "period": "2026Q1",
+      "d_mass_share_index_pts": 4.0,
+      "d_margin_vs_peers_pts": 0.22,
+      "d_margin_hold_adj_vs_peers_pts": -1.11,
+      "d_gap_pts": 2.44
+    },
+    {
+      "period": "2026Q2",
+      "d_mass_share_index_pts": 3.15,
+      "d_margin_vs_peers_pts": -4.33,
+      "d_margin_hold_adj_vs_peers_pts": 0.04,
+      "d_gap_pts": 5.32
+    },
+    {
+      "period": "2026Q3",
+      "d_mass_share_index_pts": 4.49,
+      "d_margin_vs_peers_pts": -0.16,
+      "d_margin_hold_adj_vs_peers_pts": -1.34,
+      "d_gap_pts": 2.39
+    }
+  ],
+  "latest": {
+    "period": "2026Q3",
+    "net_revenue": 1902.0,
+    "adj_property_ebitda": 528.0,
+    "ebitda_margin_pct": 27.7602523659306,
+    "margin_hold_adj": 27.18191377497371,
+    "mass_share_pct_derived": 31.378215474843568,
+    "ggr_share_pct_derived": 25.35350413850369,
+    "gap_pct_of_gross_win": 23.48377227107689,
+    "market_mass_usd_m": 5390.714463529997
+  }
+}
