@@ -31,7 +31,7 @@ and customer groups should receive it?
   differ: EBITDA vs EBITDAR), Sands' five-property margin fell 4.2 points while Wynn, MGM and Melco moved
   by −2.6 to +0.3 points **[D from P LVS-ER, WYNN/MGM/MELCO-ER]**. Sands' 3Q26 five-property margin of 27.8%
   (27.3% including ferry and other operations **[P LVS-ER-2026-10-21]**) is in line with or above those peers. The
-  relative gap of about −2.8 points **[D]** coincides with the Londoner ramp, room renovations and the
+  relative gap of about −2.8 points (−1.9 to −3.4 across robustness checks) **[D]** coincides with the Londoner ramp, room renovations and the
   closure of SJM's satellite casinos **[U PR-SATELLITE-2026]**; how much each contributed is my
   inference and cannot be separated with public data.
 - **Hotels are full.** Occupancy averaged 98–99% at The Venetian, The Parisian and Sands Macao since 2Q25

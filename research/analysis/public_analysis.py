@@ -32,7 +32,18 @@ COLORS = {"sands": "#1f4e79", "wynn": "#9aa5b1", "mgm": "#c9a227", "melco": "#7a
 
 
 def hold_impacts() -> pd.Series:
-    """LVS-reported impact on Macao Adjusted Property EBITDA of hold-adjusting rolling win %."""
+    """LVS-reported hold-adjustment impact; read from data/processed/hold_impacts.csv (built from raw by
+    extract_hold_impacts) so analysis can run from committed processed data alone."""
+    path = PROC / "hold_impacts.csv"
+    if not path.exists():
+        extract_hold_impacts()
+    h = pd.read_csv(path, index_col="period")["hold_adj_impact_usd_m"]
+    h.name = "hold_adj_impact"
+    return h
+
+
+def extract_hold_impacts() -> None:
+    """LVS-reported impact on Macao Adjusted Property EBITDA of hold-adjusting rolling win % (from raw)."""
     out = {}
     for path in sorted((ROOT / "data/raw/lvs").glob("*_ex991.htm")):
         text = to_text(path).replace("\n", " ")
@@ -43,7 +54,9 @@ def hold_impacts() -> pd.Series:
             tok = m.group(3)
             val = 0.0 if tok == "—" else (-1 if tok.startswith("(") else 1) * float(tok.strip("()").replace(",", ""))
             out[f"{m.group(2)}Q{q}"] = val
-    return pd.Series(out, name="hold_adj_impact")
+    pd.DataFrame({"period": list(out), "hold_adj_impact_usd_m": list(out.values()),
+                  "source_id": [f"LVS-ER (quarter {k})" for k in out]}).sort_values("period").to_csv(
+        PROC / "hold_impacts.csv", index=False)
 
 
 def main() -> dict:
