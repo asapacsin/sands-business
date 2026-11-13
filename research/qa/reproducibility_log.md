@@ -1,13 +1,14 @@
-# T25 — Reproducibility check (2026-11-13)
+# T25 — Reproducibility check
 
-Procedure: `git clone` of the committed repository into an empty directory →
-`python3 research/analysis/fetch_sources.py` → `python3 research/analysis/run_all.py` →
-SHA-256 comparison of every regenerated data and output file with the committed versions.
+**Reproduced revision:** `fa289a1a4a8c7439cb8262723dfe7d7c9f750209` (2026-11-13), fresh `git clone` into an empty directory.
+Later commits that touch only this log do not change any analysed file.
 
-| Step | Result |
-|---|---|
-| Source re-download (66 registered sources: 16 LVS, 46 peer, 4 DICJ) | 66/66 downloaded, 66/66 SHA-256 match the source register |
-| First attempt | One DICJ download failed with a TLS connect error (curl exit 35). Fixed by adding `--retry 5 --retry-all-errors` to `fetch_sources.py`; rerun clean |
-| `run_all.py` | exit 0 |
-| Regenerated files compared (processed CSVs, outputs JSON, output tables, fact verification) | 18/18 byte-identical |
-| Figures (PNG) | Regenerated; not hash-compared (matplotlib embeds build metadata) |
+| Mode | Command | Result |
+|---|---|---|
+| From committed processed data (spec §15.7) | `python3 research/analysis/run_all.py --from-processed` | exit 0; `git diff` on research/data/processed, research/outputs (excl. PNG figures): **0 files changed** |
+| Full, from primary sources | `python3 research/analysis/fetch_sources.py` then `python3 research/analysis/run_all.py` | 66/66 sources re-downloaded, 66/66 SHA-256 match the register; exit 0; `git diff` on processed data, outputs and sources (excl. PNG): **0 files changed** |
+| CI | `.github/workflows/ci.yml` step "one-command rebuild … byte-identical" | Same `--from-processed` check with `git diff --exit-code` |
+
+History: an earlier run (pre-`fa289a1`) hit one transient TLS error on a DICJ download; `fetch_sources.py`
+now retries (`--retry 5 --retry-all-errors`). PNG figures are regenerated but not hash-compared because
+matplotlib output can vary with installed fonts.
