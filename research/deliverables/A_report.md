@@ -54,9 +54,10 @@ positive incremental profit after Macao's ~40% gaming tax **[U PR-TAX-2022]**.
    closures. Sands' 3Q26 margin (27.8% for five properties; 27.3% including ferry and other
    **[P LVS-ER-2026-10-21]**) is in line with or above the three SEC-filing peers (23.2–27.8%)
    **[P WYNN/MGM/MELCO-ER 3Q26]**.
-4. **Whether the increment pays cannot be determined from public data.** Implied *average* returns range
-   from 0.4× to 2.1× of cost, depending on how much of the share gain is attributed to reinvestment
-   **[D economics.json + I attribution]**. Break-even is 1.0× on this measure.
+4. **Whether the increment pays cannot be determined from public data.** On an annualised 3Q26 run-rate,
+   the implied *average* return multiple (after-tax contribution ÷ extra deductions) ranges from 0.3× to
+   2.7×, depending on the share measure, the baseline and how much of the share gain is attributed to
+   reinvestment **[D economics.json + I attribution]**. Break-even is 1.0× on this measure.
 5. **Hotels are effectively full.** Mean occupancy since 2Q25 was 98.5% at The Venetian, 98.3% at The
    Parisian and 99.1% at Sands Macao **[P LVS-ER hotel statistics]**. On those nights a complimentary room
    displaces a paying guest, so its true cost is closer to the cash rate than to housekeeping cost (about
@@ -232,14 +233,22 @@ play is tax-deductible **[D economics.json + I]**.
 
 ![F6. Break-even multiple. [D formula; I parameters]](../outputs/figures/F6_break_even.png)
 
-**Public-data anchor** (average, not marginal; not causal):
+**Public-data anchor** (average, not marginal; not causal). Benefit and cost are both annualised 3Q26
+run-rates measured against the same baseline. Benefit = share gain × 3Q26 market mass GGR × 4 × attribution
+× (1 − τ − v). Cost = rise in the net-to-gross gap × 3Q26 Sands gross win × 4. Return multiple = benefit ÷
+cost; **break-even = 1.0×** (distinct from k*, the GGR-per-dollar multiple above) **[D economics.json]**.
 
-| Share gain used **[D economics.json; I attribution]** | Share of gain attributed to reinvestment | Incremental GGR (US$m/yr) | Contribution before reinvestment (US$m/yr) | Incremental deductions (US$m/yr) | Return multiple |
-|---|---|---|---|---|---|
-| Company definition +2.5 pts (23.6% → 26.1%) **[U TR-LVS-2025Q3, PR-SCL-3Q26]** | 100% | 539 | 270 | 226 | 1.19× |
-| Company definition +2.5 pts | 50% | 270 | 135 | 226 | 0.60× |
-| Derived index +4.5 pts | 100% | 968 | 484 | 226 | 2.14× |
-| Derived index +4.5 pts | 50% | 484 | 242 | 226 | 1.07× |
+| Baseline and share measure **[D economics.json; I attribution]** | Share gain | Attribution | Incremental GGR (US$m/yr) | After-tax contribution (US$m/yr) | Extra deductions (US$m/yr) | Return multiple |
+|---|---|---|---|---|---|---|
+| vs 1Q25, company definition (23.6% → 26.1%) **[U TR-LVS-2025Q3, PR-SCL-3Q26]** | 2.5 pts | 100% | 539 | 270 | 182 | 1.48× |
+| vs 1Q25, company definition | 2.5 pts | 50% | 270 | 135 | 182 | 0.74× |
+| vs 1Q25, derived mass index | 4.5 pts | 100% | 968 | 484 | 182 | 2.66× |
+| vs 1Q25, derived mass index | 4.5 pts | 50% | 484 | 242 | 182 | 1.33× |
+| vs 3Q23–1Q25 mean, derived mass index | 2.3 pts | 100% | 489 | 244 | 226 | 1.08× |
+| vs 3Q23–1Q25 mean, derived mass index | 2.3 pts | 30% | 147 | 73 | 226 | 0.32× |
+
+The derived index runs about 5 points above the company-defined share in level (31.4% vs 26.1% in 3Q26) because
+LVS's "non-rolling" includes premium mass; its *change* is used here only as an upper-side bound **[D sands_panel.csv; U PR-SCL-3Q26]**.
 
 **Scenario model** (`analysis/scenarios.py`; all response curves illustrative). The incremental pool is
 split into property × tier cells with diminishing-returns response curves, ordered by the literature
@@ -269,8 +278,9 @@ split into property × tier cells with diminishing-returns response curves, orde
 | Timeline | 4 weeks of design and compliance; 12 weeks in market; a decision at week 17 |
 | Exposure | At most 5–10% of each cell receives a changed offer (size *illustrative*; Sands would set it from its own variance data) |
 
-**What would change this recommendation:** internal or test evidence that the marginal return in most cells
-exceeds 2× (or 1.2× if promotional play is tax-deductible) **[D economics.json + I]**. In that case the
+**What would change this recommendation:** internal or test evidence that, in most cells, the next $1 of
+reinvestment generates more than k* = $2.0 of incremental GGR ($1.2 if promotional play is tax-deductible),
+i.e. a marginal return multiple above 1.0× **[D economics.json + I]**. In that case the
 increment should be kept or raised. The full protocol is in `deliverables/experiment_protocol.md`; the internal data it needs is listed
 in `deliverables/internal_data_request.md`.
 

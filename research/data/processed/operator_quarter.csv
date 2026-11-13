@@ -29,21 +29,21 @@ mgm,2025Q4,1236.5,332.3,26.88,Segment net revenues; Segment Adjusted EBITDAR (MG
 mgm,2026Q1,1122.0,273.5,24.37,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-04-29
 mgm,2026Q2,1100.9,256.7,23.32,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-07-29
 mgm,2026Q3,1138.2,264.0,23.19,Segment net revenues; Segment Adjusted EBITDAR (MGM China),MGM-ER-2026-10-28
-sands,2023Q1,1261.0,397.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2023Q2,1601.0,535.0,33.42,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2023Q3,1760.0,626.0,35.57,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2023Q4,1832.0,648.0,35.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2024Q1,1781.0,605.0,33.97,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2024Q2,1724.0,558.0,32.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2024Q3,1740.0,581.0,33.39,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2024Q4,1737.0,566.0,32.58,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2025Q1,1677.0,528.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2025Q2,1764.0,560.0,31.75,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2025Q3,1874.0,596.0,31.8,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2025Q4,2024.0,602.0,29.74,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2026Q1,2076.0,630.0,30.35,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2026Q2,1751.0,426.0,24.33,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
-sands,2026Q3,1902.0,528.0,27.76,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER (see property_quarter.csv)
+sands,2023Q1,1261.0,397.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2023-04-19
+sands,2023Q2,1601.0,535.0,33.42,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2023-07-19
+sands,2023Q3,1760.0,626.0,35.57,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2023-10-18
+sands,2023Q4,1832.0,648.0,35.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2024-01-24
+sands,2024Q1,1781.0,605.0,33.97,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2024-04-17
+sands,2024Q2,1724.0,558.0,32.37,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2024-07-24
+sands,2024Q3,1740.0,581.0,33.39,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2024-10-23
+sands,2024Q4,1737.0,566.0,32.58,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2025-01-29
+sands,2025Q1,1677.0,528.0,31.48,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2025-04-23
+sands,2025Q2,1764.0,560.0,31.75,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2025-07-23
+sands,2025Q3,1874.0,596.0,31.8,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2025-10-22
+sands,2025Q4,2024.0,602.0,29.74,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2026-01-28
+sands,2026Q1,2076.0,630.0,30.35,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2026-04-22
+sands,2026Q2,1751.0,426.0,24.33,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2026-07-22
+sands,2026Q3,1902.0,528.0,27.76,"Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",LVS-ER-2026-10-21
 wynn,2023Q1,600.1,155.8,25.96,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-05-09
 wynn,2023Q2,770.0,246.2,31.97,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-08-09
 wynn,2023Q3,819.8,254.9,31.09,Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau),WYNN-ER-2023-11-09

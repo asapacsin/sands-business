@@ -38,22 +38,44 @@ def mroi(d_contribution_before_promo: float, promo_cost: float) -> float:
 
 
 def public_anchor(results: dict, assumptions: dict) -> dict:
-    """Average return on the post-2Q25 reinvestment increase implied by public data (DERIVED, not causal)."""
+    """Average return on the post-2Q25 reinvestment increase implied by public data (DERIVED, not causal).
+
+    Benefit and cost use the SAME time basis: annualised 3Q26 run-rate measured against a baseline.
+    Baseline A = 1Q25 (last pre-push quarter); baseline B = pre-period mean 3Q23-1Q25 (sensitivity).
+    Return multiple = after-tax contribution / incremental deductions; break-even = 1.0x.
+    """
+    import csv
     tau, v = assumptions["tau_gaming_tax"]["value"], assumptions["v_variable_cost_share"]["value"]
-    mass_q = results["latest"]["market_mass_usd_m"]
-    cost_year = results["net_to_gross"]["implied_extra_deductions_usd_m_annualised"]
+    tot = {r["period"]: r for r in csv.DictReader(open(ROOT / "data/processed/sands_panel.csv"))
+           if r["unit"] == "SandsMacao5_total"}
+    f = lambda q, k: float(tot[q][k])  # noqa: E731
+    pre = ["2023Q3", "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1"]
+    now = "2026Q3"
+    mass_q, gross_q = f(now, "market_mass_usd_m"), f(now, "gross_win")
+    baselines = {
+        "baseline_1Q25": {"gap": f("2025Q1", "gap_pct_of_gross_win"), "index": f("2025Q1", "mass_share_pct_derived"),
+                          "company_gain": assumptions["share_gain_pts_company_definition"]["value"]},
+        "baseline_pre_mean": {"gap": sum(f(q, "gap_pct_of_gross_win") for q in pre) / len(pre),
+                              "index": sum(f(q, "mass_share_pct_derived") for q in pre) / len(pre),
+                              "company_gain": None},
+    }
     out = {}
-    for label, share_pts in (("company_definition", assumptions["share_gain_pts_company_definition"]["value"]),
-                             ("derived_index", results["tradeoff_vs_2025Q1"][-1]["d_mass_share_index_pts"])):
-        for attribution in (1.0, 0.5, 0.3):
-            d_ggr_year = share_pts / 100 * mass_q * 4 * attribution
-            contrib = d_ggr_year * (1 - tau - v)
-            out[f"{label}_attr{attribution}"] = {
-                "share_gain_pts": round(share_pts, 2), "attribution": attribution,
-                "incremental_ggr_usd_m_yr": round(d_ggr_year), "contribution_before_promo_usd_m_yr": round(contrib),
-                "incremental_deductions_usd_m_yr": round(cost_year),
-                "average_return_multiple": round(contrib / cost_year, 2),
-                "net_contribution_usd_m_yr": round(contrib - cost_year)}
+    for bname, b in baselines.items():
+        cost_year = (f(now, "gap_pct_of_gross_win") - b["gap"]) / 100 * gross_q * 4
+        measures = {"derived_index": f(now, "mass_share_pct_derived") - b["index"]}
+        if b["company_gain"] is not None:
+            measures["company_definition"] = b["company_gain"]
+        for label, share_pts in measures.items():
+            for attribution in (1.0, 0.5, 0.3):
+                d_ggr_year = share_pts / 100 * mass_q * 4 * attribution
+                contrib = d_ggr_year * (1 - tau - v)
+                out[f"{bname}|{label}|attr{attribution}"] = {
+                    "baseline": bname, "share_measure": label, "share_gain_pts": round(share_pts, 2),
+                    "attribution": attribution, "incremental_ggr_usd_m_yr": round(d_ggr_year),
+                    "contribution_before_promo_usd_m_yr": round(contrib),
+                    "incremental_deductions_usd_m_yr": round(cost_year),
+                    "return_multiple": round(contrib / cost_year, 2),
+                    "net_contribution_usd_m_yr": round(contrib - cost_year)}
     return out
 
 

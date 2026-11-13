@@ -24,7 +24,7 @@ I don't, and the report says so. The peer-reviewed evidence (C02–C05) shows th
 players often don't respond to free-play changes. That justifies testing the hypothesis, not assuming it.
 Macao is different: baccarat-led, visits constrained by travel, and a 2026 market where every operator was
 competing for displaced satellite-casino players. The public data gives an average return range of
-0.4–2.1×, which straddles break-even. That is exactly why the recommendation is a test. [U LIT-LUCAS-2024, LIT-LUCAS-2020; D economics.json; U PR-SATELLITE-2026]
+0.3–2.7× of the extra cost on a current run-rate basis (break-even 1.0×), which straddles break-even. That is exactly why the recommendation is a test. [U LIT-LUCAS-2024, LIT-LUCAS-2020; D economics.json; U PR-SATELLITE-2026]
 
 **4. "Walk me through why break-even is about 2× and not 1×."**
 Gaming tax and levies take about 40% of GGR; assume another ~10% in variable costs such as service, F&B

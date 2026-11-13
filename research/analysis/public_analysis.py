@@ -44,7 +44,7 @@ def hold_impacts() -> pd.Series:
 
 def extract_hold_impacts() -> None:
     """LVS-reported impact on Macao Adjusted Property EBITDA of hold-adjusting rolling win % (from raw)."""
-    out = {}
+    out, srcs = {}, {}
     for path in sorted((ROOT / "data/raw/lvs").glob("*_ex991.htm")):
         text = to_text(path).replace("\n", " ")
         m = re.search(r"impact on Adjusted Property EBITDA for hold-adjusted win percentage: \| Three Months Ended \| "
@@ -54,8 +54,9 @@ def extract_hold_impacts() -> None:
             tok = m.group(3)
             val = 0.0 if tok == "—" else (-1 if tok.startswith("(") else 1) * float(tok.strip("()").replace(",", ""))
             out[f"{m.group(2)}Q{q}"] = val
+            srcs[f"{m.group(2)}Q{q}"] = f"LVS-ER-{path.name[:10]}"
     pd.DataFrame({"period": list(out), "hold_adj_impact_usd_m": list(out.values()),
-                  "source_id": [f"LVS-ER (quarter {k})" for k in out]}).sort_values("period").to_csv(
+                  "source_id": [srcs[k] for k in out]}).sort_values("period").to_csv(
         PROC / "hold_impacts.csv", index=False)
 
 

@@ -9,11 +9,11 @@ and must be confirmed with counsel before any operational use.
 | Item | Finding | Label | Source |
 |---|---|---|---|
 | Special gaming tax | 35% of GGR | `[SECONDARY ✔]` (multiple outlets agree) | [GGRAsia 2022](https://www.ggrasia.com/macau-40pct-ggr-tax-in-new-law-ce-can-cut-up-to-5-points/), [AGBrief 2022](https://agbrief.com/intelligence/16/06/2022/macau-1-percentage-point-gaming-tax-hike-last-minute-sting-in-the-tail-for-operators/) |
-| Levies | Amended law made the 2% (Macao Foundation) and 3% (urban development, tourism, social security) levies fixed rather than "up to", so the total is ~40% of GGR (previously ~39%) | `[SECONDARY ✔]` | [ASGAM 2022](https://asgam.com/2022/06/16/macau-concessionaires-facing-1-effective-ggr-tax-hike-under-new-gaming-law/) |
+| Levies | Amended law made the 2% (Macao Foundation) and 3% (urban development, tourism, social security) levies fixed rather than "up to", so the total is ~40% of GGR (previously ~39%) | `[SECONDARY ✔]` — trade press only; statute not read (deliverables tag it `[U PR-TAX-2022]`) | [ASGAM 2022](https://asgam.com/2022/06/16/macau-concessionaires-facing-1-effective-ggr-tax-hike-under-new-gaming-law/) |
 | Reductions | The Chief Executive may reduce the burden by up to 5 points, e.g. for GGR from foreign players | `[SECONDARY ✔]` | [Macau Business](https://www.macaubusiness.com/gaming-tax-rebates-on-foreign-bets-rise-in-2024-govt/) |
 | Tax treatment of promotional / free play | **Not verified.** Whether promotional chips reduce taxable GGR determines whether reinvestment is "pre-tax" or "post-tax" money | `[TO-VERIFY]` | — |
 
-**Model choice**: base τ = 0.40; sensitivity τ ∈ {0.35, 0.39, 0.40}. Promotional-cost tax treatment
+**Model choice**: base τ = 0.40; sensitivity τ ∈ {0.35, 0.40} (economics.json) and the 0.35–0.40 grid in F6. Promotional-cost tax treatment
 is run as a scenario switch (`promo_reduces_taxable_ggr` = False/True).
 
 ## 2. Market structure events that confound 2025–2026 comparisons

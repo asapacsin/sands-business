@@ -15,59 +15,104 @@
     "tau0.4_v0.2_promoTaxDeductibleTrue": 1.5
   },
   "public_anchor": {
-    "company_definition_attr1.0": {
-      "share_gain_pts": 2.5,
-      "attribution": 1.0,
-      "incremental_ggr_usd_m_yr": 539,
-      "contribution_before_promo_usd_m_yr": 270,
-      "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 1.19,
-      "net_contribution_usd_m_yr": 44
-    },
-    "company_definition_attr0.5": {
-      "share_gain_pts": 2.5,
-      "attribution": 0.5,
-      "incremental_ggr_usd_m_yr": 270,
-      "contribution_before_promo_usd_m_yr": 135,
-      "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 0.6,
-      "net_contribution_usd_m_yr": -91
-    },
-    "company_definition_attr0.3": {
-      "share_gain_pts": 2.5,
-      "attribution": 0.3,
-      "incremental_ggr_usd_m_yr": 162,
-      "contribution_before_promo_usd_m_yr": 81,
-      "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 0.36,
-      "net_contribution_usd_m_yr": -145
-    },
-    "derived_index_attr1.0": {
+    "baseline_1Q25|derived_index|attr1.0": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "derived_index",
       "share_gain_pts": 4.49,
       "attribution": 1.0,
       "incremental_ggr_usd_m_yr": 968,
       "contribution_before_promo_usd_m_yr": 484,
-      "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 2.14,
-      "net_contribution_usd_m_yr": 258
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 2.66,
+      "net_contribution_usd_m_yr": 302
     },
-    "derived_index_attr0.5": {
+    "baseline_1Q25|derived_index|attr0.5": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "derived_index",
       "share_gain_pts": 4.49,
       "attribution": 0.5,
       "incremental_ggr_usd_m_yr": 484,
       "contribution_before_promo_usd_m_yr": 242,
-      "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 1.07,
-      "net_contribution_usd_m_yr": 16
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 1.33,
+      "net_contribution_usd_m_yr": 60
     },
-    "derived_index_attr0.3": {
+    "baseline_1Q25|derived_index|attr0.3": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "derived_index",
       "share_gain_pts": 4.49,
       "attribution": 0.3,
       "incremental_ggr_usd_m_yr": 290,
       "contribution_before_promo_usd_m_yr": 145,
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 0.8,
+      "net_contribution_usd_m_yr": -37
+    },
+    "baseline_1Q25|company_definition|attr1.0": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "company_definition",
+      "share_gain_pts": 2.5,
+      "attribution": 1.0,
+      "incremental_ggr_usd_m_yr": 539,
+      "contribution_before_promo_usd_m_yr": 270,
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 1.48,
+      "net_contribution_usd_m_yr": 88
+    },
+    "baseline_1Q25|company_definition|attr0.5": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "company_definition",
+      "share_gain_pts": 2.5,
+      "attribution": 0.5,
+      "incremental_ggr_usd_m_yr": 270,
+      "contribution_before_promo_usd_m_yr": 135,
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 0.74,
+      "net_contribution_usd_m_yr": -47
+    },
+    "baseline_1Q25|company_definition|attr0.3": {
+      "baseline": "baseline_1Q25",
+      "share_measure": "company_definition",
+      "share_gain_pts": 2.5,
+      "attribution": 0.3,
+      "incremental_ggr_usd_m_yr": 162,
+      "contribution_before_promo_usd_m_yr": 81,
+      "incremental_deductions_usd_m_yr": 182,
+      "return_multiple": 0.44,
+      "net_contribution_usd_m_yr": -101
+    },
+    "baseline_pre_mean|derived_index|attr1.0": {
+      "baseline": "baseline_pre_mean",
+      "share_measure": "derived_index",
+      "share_gain_pts": 2.27,
+      "attribution": 1.0,
+      "incremental_ggr_usd_m_yr": 489,
+      "contribution_before_promo_usd_m_yr": 244,
       "incremental_deductions_usd_m_yr": 226,
-      "average_return_multiple": 0.64,
-      "net_contribution_usd_m_yr": -81
+      "return_multiple": 1.08,
+      "net_contribution_usd_m_yr": 18
+    },
+    "baseline_pre_mean|derived_index|attr0.5": {
+      "baseline": "baseline_pre_mean",
+      "share_measure": "derived_index",
+      "share_gain_pts": 2.27,
+      "attribution": 0.5,
+      "incremental_ggr_usd_m_yr": 244,
+      "contribution_before_promo_usd_m_yr": 122,
+      "incremental_deductions_usd_m_yr": 226,
+      "return_multiple": 0.54,
+      "net_contribution_usd_m_yr": -104
+    },
+    "baseline_pre_mean|derived_index|attr0.3": {
+      "baseline": "baseline_pre_mean",
+      "share_measure": "derived_index",
+      "share_gain_pts": 2.27,
+      "attribution": 0.3,
+      "incremental_ggr_usd_m_yr": 147,
+      "contribution_before_promo_usd_m_yr": 73,
+      "incremental_deductions_usd_m_yr": 226,
+      "return_multiple": 0.32,
+      "net_contribution_usd_m_yr": -153
     }
   },
   "comp_room_opportunity_cost_usd_per_night": {

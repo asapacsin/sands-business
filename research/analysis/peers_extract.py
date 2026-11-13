@@ -88,6 +88,8 @@ def build() -> list[dict]:
                                         "margin_pct": round(100 * vals["ebitda"] / vals["net_revenue"], 2),
                                         "definition": DEFINITIONS[operator],
                                         "source_id": f"{operator.upper()}-ER-{path.stem.split('_')[1]}"}
+    SANDS_SRC = {r["period"]: r["source_id"] for r in csv.DictReader(open(ROOT / "data/processed/property_quarter.csv"))
+                 if r["basis"] == "reported"}
     sands = [r for r in csv.DictReader(open(ROOT / "data/processed/sands_panel.csv")) if r["unit"] == "SandsMacao5_total"]
     for r in sands:
         rows[("sands", r["period"])] = {"operator": "sands", "period": r["period"],
@@ -95,7 +97,7 @@ def build() -> list[dict]:
                                          "ebitda_usd_m": round(float(r["adj_property_ebitda"]), 1),
                                          "margin_pct": round(float(r["ebitda_margin_pct"]), 2),
                                          "definition": "Net revenues; Adjusted Property EBITDA (5 Macao properties, excl. ferry/other)",
-                                         "source_id": "LVS-ER (see property_quarter.csv)"}
+                                         "source_id": SANDS_SRC.get(r["period"], "LVS-ER")}
     out = sorted(rows.values(), key=lambda r: (r["operator"], r["period"]))
     with OUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(out[0]))

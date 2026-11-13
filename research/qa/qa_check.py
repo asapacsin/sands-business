@@ -56,7 +56,7 @@ def blocks(text: str):
                 yield "\n".join(cur)
             cur = []
             continue
-        if line.lstrip().startswith(("- ", "1.", "2.", "3.", "4.", "5.")) and cur and not cur[0].startswith("|"):
+        if re.match(r"^\s{0,3}(?:- |\d+\. )", line) and cur and not cur[0].startswith("|"):
             yield "\n".join(cur)
             cur = []
         cur.append(line)
@@ -127,7 +127,7 @@ check("B: ≤ 2 rendered pages (PDF)", 1 <= pdf_pages("B_brief") <= 2, f"pages={
 check("D: 8 questions", len(re.findall(r"^\*\*\d+\.", D, re.M)) == 8)
 
 # 8. Headline numbers in B also appear in A (traceability)
-for token in ("22.4%", "25.4%", "20.5%", "23.5%", "US$226m", "4.2 points", "27.8%", "0.4", "2.1", "98"):
+for token in ("22.4%", "25.4%", "20.5%", "23.5%", "US$226m", "4.2 points", "27.8%", "0.3×", "2.7×", "98"):
     check(f"B number '{token}' traceable to A", token in A)
 
 # 9. Fact verification: no CORRECTED/unresolved facts used as-is

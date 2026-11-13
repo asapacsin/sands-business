@@ -50,8 +50,8 @@ Checks: 51; failed: 0
 | B number 'US$226m' traceable to A | PASS |  |
 | B number '4.2 points' traceable to A | PASS |  |
 | B number '27.8%' traceable to A | PASS |  |
-| B number '0.4' traceable to A | PASS |  |
-| B number '2.1' traceable to A | PASS |  |
+| B number '0.3×' traceable to A | PASS |  |
+| B number '2.7×' traceable to A | PASS |  |
 | B number '98' traceable to A | PASS |  |
 | all spec facts resolved | PASS | 17 facts |
 | re-extraction of 252 sampled values (20%) | PASS | [] |
