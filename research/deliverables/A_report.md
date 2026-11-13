@@ -32,8 +32,8 @@ positive incremental profit after Macao's ~40% gaming tax **[U PR-TAX-2022]**.
    rose from 20.5% to 23.5% of gross win, about **US$226m a year** of additional rebates, discounts, comps
    and commissions **[D results.json net_to_gross]**. This is a proxy, not a promotional ledger.
 3. **Margins fell, partly market-wide.** Sands' five-property adjusted property EBITDA margin fell
-   4.2 points; peers moved by −2.6 to +0.2 points on a *directional* comparison (EBITDA vs EBITDAR definitions)
-   **[D results.json margin_did]**. The difference of about −2.8 points (−2.0 excluding the low-hold 2Q26)
+   4.2 points; peers moved by −2.6 to +0.3 points on a *directional* comparison (EBITDA vs EBITDAR definitions)
+   **[D results.json margin_did]**. The difference of about −2.8 points (−2.1 excluding the low-hold 2Q26)
    is consistent with reinvestment costs, but it also spans the Londoner ramp and the satellite-casino
    closures. Sands' 3Q26 margin (27.8% for five properties; 27.3% including ferry and other
    **[P LVS-ER-2026-10-21]**) remains at or above the three SEC-filing peers (23.2–27.8%)
@@ -85,7 +85,7 @@ The timing matters for three reasons:
 | Sands China (5 properties, adj. property EBITDA) | 31.5% | 31.8% | 30.4% | 27.8% | −4.2 pts |
 | Wynn Macau + Wynn Palace (adj. property EBITDAR) | 29.1% | 30.8% | 28.2% | 27.8% | −2.6 pts |
 | MGM China (segment adj. EBITDAR) | 27.8% | 26.1% | 24.4% | 23.2% | −2.0 pts |
-| Melco Macau properties (adj. EBITDA) | 28.1% | 29.0% | 28.4% | 23.4% | +0.2 pts |
+| Melco Macau properties (adj. EBITDA) | 28.1% | 29.0% | 28.4% | 23.4% | +0.3 pts |
 
 Galaxy Entertainment and SJM do not file with the SEC and were not included (documented gap). MGM China
 reported a record 17.1% market share in 3Q26, which shows rivals were also competing for share
@@ -182,9 +182,9 @@ A difference-in-differences comparison of mean margins (post 2Q25–3Q26 vs pre 
 **−2.8 points** relative to the peer average **[D results.json margin_did]**. Robustness checks, all **[D]**:
 
 - Hold-adjusting Sands: −2.8.
-- Excluding 2Q26: −2.0.
-- Leaving out one peer at a time: −1.9 to −3.3.
-- Placebo start dates in 2024: −0.2 to −0.9.
+- Excluding 2Q26: −2.1.
+- Leaving out one peer at a time: −1.9 to −3.4.
+- Placebo start dates in 2024: −0.3 to −0.8.
 
 The post-2Q25 divergence is therefore larger than in earlier periods. It cannot be attributed to
 reinvestment alone: three peers is a small sample, their EBITDA definitions differ, and the treatment
@@ -218,7 +218,7 @@ play is tax-deductible **[D economics.json + I]**.
 
 | Share gain used **[D economics.json; I attribution]** | Share of gain attributed to reinvestment | Incremental GGR (US$m/yr) | Contribution before reinvestment (US$m/yr) | Incremental deductions (US$m/yr) | Return multiple |
 |---|---|---|---|---|---|
-| Company definition +2.5 pts **[U TR-LVS-2025Q2/Q3 calls]** | 100% | 539 | 270 | 226 | 1.19× |
+| Company definition +2.5 pts (23.6% → 26.1%) **[U TR-LVS-2025Q3, PR-SCL-3Q26]** | 100% | 539 | 270 | 226 | 1.19× |
 | Company definition +2.5 pts | 50% | 270 | 135 | 226 | 0.60× |
 | Derived index +4.5 pts | 100% | 968 | 484 | 226 | 2.14× |
 | Derived index +4.5 pts | 50% | 484 | 242 | 226 | 1.07× |

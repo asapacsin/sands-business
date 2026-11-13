@@ -123,16 +123,16 @@
     "peer_changes_pts": {
       "wynn": -2.61,
       "mgm": -2.01,
-      "melco": 0.19
+      "melco": 0.34
     },
-    "did_pts": -2.77,
-    "did_hold_adjusted_sands_pts": -2.84,
+    "did_pts": -2.82,
+    "did_hold_adjusted_sands_pts": -2.89,
     "leave_one_out": {
-      "without_wynn": -3.34,
-      "without_mgm": -3.03,
+      "without_wynn": -3.41,
+      "without_mgm": -3.11,
       "without_melco": -1.93
     },
-    "did_excluding_2026Q2_pts": -2.04,
+    "did_excluding_2026Q2_pts": -2.1,
     "hold_adjustment_available_quarters": [
       "2024Q1",
       "2024Q2",
@@ -146,9 +146,9 @@
       "2026Q3"
     ],
     "placebo_did_pts": {
-      "2024Q2": -0.85,
-      "2024Q3": -0.19,
-      "2024Q4": -0.41
+      "2024Q2": -0.81,
+      "2024Q3": -0.32,
+      "2024Q4": -0.53
     },
     "identification": "Weak: 3 donors with different EBITDA vs EBITDAR definitions; treatment coincides with Londoner room-inventory return (mid-2025) and satellite-casino closures (end-2025)."
   },

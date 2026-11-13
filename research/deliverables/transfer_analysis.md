@@ -33,7 +33,7 @@ Evidence grades and case IDs refer to `sources/case_register.csv`. Sands facts a
 | Proposed Sands decision | Test a –30% offer arm for established rated-mass players (largest pool share) |
 | Mechanism | Saves reinvestment cost if theo loss < saving/(1 − τ − v) |
 | Validation | Holdout; guardrails on visits and share |
-| Verdict | **Transferable as a hypothesis to test**, not as a result |
+| Verdict | **Hypothesis to test**, not a result |
 
 ### Chain 3 — Total-guest-value room allocation (C07, E3)
 
@@ -48,7 +48,7 @@ Evidence grades and case IDs refer to `sources/case_register.csv`. Sands facts a
 | Proposed Sands decision | On forecast sell-out nights, swap room comps for non-room rewards for players below a theo threshold |
 | Mechanism | Comp room opportunity cost ≈ US$94–211/night under illustrative P(sellout) `[ILLUSTRATIVE]` vs ≈ US$40 when not full |
 | Validation | Randomise reward type on forecast high-occupancy nights; measure displaced cash revenue and gaming response |
-| Verdict | **Transferable** (strongest operational fit) |
+| Verdict | **Transferable with adaptation** (strongest operational fit) |
 
 ### Chain 4 — Reactivation of lapsed / new players (C10, E4)
 
@@ -59,7 +59,7 @@ Evidence grades and case IDs refer to `sources/case_register.csv`. Sands facts a
 | Outcome | Vendor claims: -18% promo expense, 75% reactivation (no counterfactual) |
 | Sands problem | 2026 satellite closures put ~US$1.25bn of 2025 GGR up for grabs `[SECONDARY ✔]` — many new-to-Sands mass players |
 | Proposed Sands decision | Shift part of the reinvestment increment from established to new/lapsed cells |
-| Verdict | **Plausible; evidence weak (E4)** — include only as a test arm |
+| Verdict | **Hypothesis to test** (evidence weak, E4) — include only as a test arm |
 
 ### Chain 5 — Demand-based labour scheduling (C12–C13, E4)
 
@@ -79,10 +79,10 @@ Evidence grades and case IDs refer to `sources/case_register.csv`. Sands facts a
 | Approach | External evidence (grade) | Sands property / segment | Decision owner | Required data | Business KPI | Financial mechanism | Complexity | Key risks & constraints | Public-data feasibility | Measurable incremental value | Transferable? |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 Control-group offer testing | C01 (E3), C02–C05 (E2) | All, rated mass | VP Casino Marketing + FP&A | Player-trip theo, offers, redemptions | Incremental contribution per $ | Cut non-incremental spend; fund responsive cells | M | Host pushback; RG exclusions; PDPA | Low (design only) | **High** | Yes, with adaptation |
-| 2 FP right-sizing, established players | C02–C05 (E2) | Venetian, Londoner, Parisian (largest mass pools) | Casino Marketing | Same + tier history | Theo per $ FP; visits | Lower cost at constant theo | L | Competitor scramble 2026; share loss | Low | High | Hypothesis only |
-| 3 Total-guest-value room allocation | C07 (E3) | Venetian, Parisian, Sands Macao (≥98% occupancy) | Hotel RM + Casino Marketing | Night-level occupancy, comp vs cash, guest theo | Displaced cash revenue; RevPAR + theo | Recover cash ADR on sell-out nights | M | Guest experience for downgraded players | Medium (occupancy/ADR public) | Medium–High | **Yes** |
+| 2 FP right-sizing, established players | C02–C05 (E2) | Venetian, Londoner, Parisian (largest mass pools) | Casino Marketing | Same + tier history | Theo per $ FP; visits | Lower cost at constant theo | L | Competitor scramble 2026; share loss | Low | High | Hypothesis to test |
+| 3 Total-guest-value room allocation | C07 (E3) | Venetian, Parisian, Sands Macao (≥98% occupancy) | Hotel RM + Casino Marketing | Night-level occupancy, comp vs cash, guest theo | Displaced cash revenue; RevPAR + theo | Recover cash ADR on sell-out nights | M | Guest experience for downgraded players | Medium (occupancy/ADR public) | Medium–High | Yes, with adaptation |
 | 4 Dynamic cash room pricing | C07 (E3), C08 (TO-VERIFY) | Londoner (new inventory), Plaza/Four Seasons | Hotel RM | Booking curves | ADR, RevPAR | Price to demand | M | Brand positioning | Medium | Medium | Yes |
-| 5 New/lapsed reactivation | C10 (E4) | Cotai mass | Casino Marketing | Acquisition source, first-visit theo | Second-visit rate, theo | Grow base at lower cost | M | Weak evidence | Low | Uncertain | Test arm only |
+| 5 New/lapsed reactivation | C10 (E4) | Cotai mass | Casino Marketing | Acquisition source, first-visit theo | Second-visit rate, theo | Grow base at lower cost | M | Weak evidence | Low | Uncertain | Hypothesis to test |
 | 6 Labour scheduling | C12–C13 (E4) | Table games, F&B | Operations | Hourly demand, rosters | Labour cost per table hour, service levels | Lower overtime | H | Labour quotas; service strategy | Low | Uncertain | Not prioritised |
-| 7 Cross-property itinerary offers | — (no case found) | Cotai (connected properties) | Marketing + Entertainment | Cross-property spend | Non-gaming spend per guest | Shift value to non-gaming (concession goals) | M | Attribution | Low | Uncertain | Hypothesis |
+| 7 Cross-property itinerary offers | — (no case found) | Cotai (connected properties) | Marketing + Entertainment | Cross-property spend | Non-gaming spend per guest | Shift value to non-gaming (concession goals) | M | Attribution | Low | Uncertain | Hypothesis to test |
 | 8 ML real-time bonuses | C11 (E4, online) | — | — | — | — | — | H | Online gaming illegal | — | — | **No** |

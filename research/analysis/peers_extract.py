@@ -56,7 +56,7 @@ def melco(text: str) -> dict:
     rev = ebitda = 0.0
     parts = 0
     for prop, possessive in (("City of Dreams", "City of Dreams’"), ("Studio City", "Studio City’s"), ("Altira Macau", "Altira Macau’s")):
-        r = re.search(rf"total operating revenues at {prop} were US\$([\d,.]+) million", text)
+        r = re.search(rf"total operating revenues at {prop} were US\$([\d,.]+) million", text, re.I)
         e = (re.search(rf"{possessive} (negative )?Adjusted EBITDA was US\$([\d,.]+) million", text)
              or re.search(rf"{prop} generated (negative )?Adjusted EBITDA of US\$([\d,.]+) million", text))
         if r and e:
@@ -66,6 +66,9 @@ def melco(text: str) -> dict:
     return {period: {"net_revenue": rev, "ebitda": ebitda}} if parts == 3 else {}
 
 
+# Preliminary 4Q25 financial-statement exhibit filed a day before the full release (MGM-ER-2026-02-05); not used.
+EXCLUDED = {"mgm_2026-02-04.htm"}
+
 DEFINITIONS = {"wynn": "Operating revenues; Adjusted Property EBITDAR (Wynn Palace + Wynn Macau)",
                "mgm": "Segment net revenues; Segment Adjusted EBITDAR (MGM China)",
                "melco": "Total operating revenues; Adjusted EBITDA (CoD Macau + Studio City + Altira)"}
@@ -74,6 +77,8 @@ DEFINITIONS = {"wynn": "Operating revenues; Adjusted Property EBITDAR (Wynn Pala
 def build() -> list[dict]:
     rows = {}
     for path in sorted(RAW.glob("*.htm")):
+        if path.name in EXCLUDED:
+            continue
         operator = path.name.split("_")[0]
         text = to_text(path).replace("\n", " ")
         for period, vals in {"wynn": wynn, "mgm": mgm, "melco": melco}[operator](text).items():

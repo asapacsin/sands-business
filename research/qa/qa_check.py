@@ -71,8 +71,20 @@ for label, text in (("A", A), ("B", B), ("D", D)):
 # 3c. every source ID used in a tag exists in the source register
 register = {r["source_id"] for r in csv.DictReader(open(ROOT / "sources/source_register.csv"))}
 families = {sid.rsplit("-", 3)[0] if sid[-10:-6].isdigit() else sid for sid in register}
-ids = set(re.findall(r"\b((?:LVS|WYNN|MGM|MELCO)-ER-\d{4}-\d{2}-\d{2}|DICJ-Q-\d{4}|(?:TR|BRK|LIT|PR|LAW)-[A-Z0-9-]+)\b", A + B + D))
-missing = sorted(i for i in ids if i not in register)
+ids = set()
+for tag in re.findall(r"\[[PDIUR][ :][^\]]*\]", A + B + D):
+    for group in re.split(r"[\s,;+]+", tag.strip("[]")):
+        prev = None
+        for piece in group.split("/"):
+            if prev and re.fullmatch(r"(Q\d|\d{4}|\d{4}-\d{2}-\d{2})", piece):
+                piece = prev[: len(prev) - len(piece)] + piece  # TR-LVS-2025Q2/Q3, DICJ-Q-2024/2025
+            prev = piece
+            if re.fullmatch(r"(?:LVS|WYNN|MGM|MELCO)-ER(?:-\d{4}-\d{2}-\d{2})?|DICJ-Q(?:-\d{4})?|(?:TR|BRK|LIT|PR|LAW)-[A-Z0-9-]+", piece):
+                ids.add(piece)
+            elif re.fullmatch(r"(?:WYNN|MGM|MELCO)", piece):
+                ids.add(piece + "-ER")
+family_ok = lambda i: any(r.startswith(i + "-") for r in register)  # noqa: E731
+missing = sorted(i for i in ids if i not in register and not family_ok(i))
 check("all cited source IDs exist in source register", not missing, str(missing))
 
 # 3d. cross-operator comparisons labelled directional; illustrative defined

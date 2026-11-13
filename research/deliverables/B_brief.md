@@ -28,7 +28,7 @@ and customer groups should receive it?
   an internal ledger.
 - **Margins compressed, partly across the market.** On a *directional* comparison (peer definitions
   differ: EBITDA vs EBITDAR), Sands' five-property margin fell 4.2 points while Wynn, MGM and Melco moved
-  by −2.6 to +0.2 points **[D from P LVS-ER, WYNN/MGM/MELCO-ER]**. Sands' 3Q26 five-property margin of 27.8%
+  by −2.6 to +0.3 points **[D from P LVS-ER, WYNN/MGM/MELCO-ER]**. Sands' 3Q26 five-property margin of 27.8%
   (27.3% including ferry and other operations **[P LVS-ER-2026-10-21]**) is at or above those peers. The
   relative gap of about −2.8 points **[D]** coincides with the Londoner ramp, room renovations and the
   closure of SJM's satellite casinos **[U PR-SATELLITE-2026]**; how much each contributed is my
@@ -62,8 +62,8 @@ directly to Macao's baccarat-led market, but the testing discipline does.
 If the test shows marginal returns above break-even in most cells, the case for keeping or expanding the
 increment becomes evidence-based. If not, the savings can be redirected to the cells that respond.
 
-### What I would need to go further
+### Going further
 
-Player-trip theoretical win, offers issued and redeemed, night-level comp and cash room data, and a
-breakdown of net-to-gross deductions. With those, the analysis pipeline, already built and validated on
-synthetic data, could produce cell-level estimates within weeks.
+The internal data a full answer would require, and the test protocol, are set out separately in the
+project's internal-data request and experiment protocol. The analysis pipeline is already built and
+validated on synthetic data.
