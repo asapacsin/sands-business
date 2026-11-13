@@ -384,7 +384,7 @@
     {
       "id": "T26",
       "owner": "HUMAN_DECISION",
-      "status": "HUMAN_REQUIRED",
+      "status": "PASS",
       "priority": 260,
       "data_class": "HUM",
       "action": "Human review and send decision \u2014 execute task card T26 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
@@ -404,7 +404,11 @@
           "revise then send",
           "do not send"
         ]
-      }
+      },
+      "evidence": [
+        "Decision record 2026-11-13: DO NOT SEND (explicit choice by the author via in-session question)",
+        "Research retained in repository as a portfolio piece; nothing was sent to anyone"
+      ]
     }
   ]
 }
