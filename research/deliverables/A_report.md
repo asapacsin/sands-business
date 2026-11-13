@@ -109,7 +109,8 @@ reported a record 17.1% market share in 3Q26, which shows rivals were also compe
 
 ## 4. What comparable operators teach
 
-Sixteen cases were reviewed and graded (`sources/case_register.csv`). Three lessons matter:
+Thirteen cases were reviewed and graded (`sources/case_register.csv`); three further citations could not be
+retrieved and were excluded rather than graded. Three lessons matter:
 
 1. **Control groups, not intuition.** Harrah's (now Caesars) is the best-known example of offer decisions
    tested against control groups **[U LIT-LOVEMAN-2003, grade E3]**: persuasive on method, not proof of

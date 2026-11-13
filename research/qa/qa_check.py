@@ -93,6 +93,17 @@ for label, text in (("A", A), ("B", B)):
         check(f"{label}: peer margin comparison labelled 'directional'", "directional" in text.lower())
     check(f"{label}: illustrative defined as 'not a Sands figure'", "not a sands figure" in text.lower())
 
+# 3e. supporting registers well-formed and closed (spec §15.2, §13)
+for reg in ("case_register.csv", "source_register.csv", "fact_verification.csv"):
+    lines = list(csv.reader(open(ROOT / "sources" / reg)))
+    bad = [r[0] for r in lines[1:] if len(r) != len(lines[0])]
+    check(f"{reg}: consistent column count", not bad, str(bad))
+cases = list(csv.DictReader(open(ROOT / "sources/case_register.csv")))
+check("case_register: every grade in E1–E6", all(c["evidence_grade"] in {f"E{i}" for i in range(1, 7)} for c in cases),
+      str(sorted({c["evidence_grade"] for c in cases})))
+check("case_register: ≥12 cases and ≥3 E1/E2", len(cases) >= 12 and sum(c["evidence_grade"] in ("E1", "E2") for c in cases) >= 3)
+check("case_register: no open TO-VERIFY items", "TO-VERIFY" not in (ROOT / "sources/case_register.csv").read_text())
+
 # 4. Illustrative labelling
 check("A: illustrative values labelled", A.lower().count("illustrative") >= 4, f"count={A.lower().count('illustrative')}")
 

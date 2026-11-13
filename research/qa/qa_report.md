@@ -1,6 +1,6 @@
 # QA report (T22)
 
-Checks: 45; failed: 0
+Checks: 51; failed: 0
 
 | Check | Result | Detail |
 |---|---|---|
@@ -22,6 +22,12 @@ Checks: 45; failed: 0
 | A: illustrative defined as 'not a Sands figure' | PASS |  |
 | B: peer margin comparison labelled 'directional' | PASS |  |
 | B: illustrative defined as 'not a Sands figure' | PASS |  |
+| case_register.csv: consistent column count | PASS | [] |
+| source_register.csv: consistent column count | PASS | [] |
+| fact_verification.csv: consistent column count | PASS | [] |
+| case_register: every grade in E1–E6 | PASS | ['E2', 'E3', 'E4', 'E5'] |
+| case_register: ≥12 cases and ≥3 E1/E2 | PASS |  |
+| case_register: no open TO-VERIFY items | PASS |  |
 | A: illustrative values labelled | PASS | count=4 |
 | A: uses term 'GGR' | PASS |  |
 | A: uses term 'net revenue' | PASS |  |

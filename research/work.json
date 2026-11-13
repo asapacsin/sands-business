@@ -84,7 +84,7 @@
         "T01"
       ],
       "evidence": [
-        "sources/case_register.csv 16 cases (5 E2)",
+        "sources/case_register.csv 13 graded cases (4 E2); 3 unretrievable citations moved to search_log.csv",
         "sources/search_log.csv"
       ]
     },

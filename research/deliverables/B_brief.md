@@ -42,8 +42,8 @@ and customer groups should receive it?
 Assuming a 40% gaming tax (as reported in trade press; statute not yet checked) and 10% variable cost, a dollar of reinvestment must create about **$2 of
 incremental GGR** to break even, or about $1.2 if promotional play reduces taxable GGR, which needs
 confirming **[I]**. Depending on how much of the share gain can be attributed to reinvestment, public data
-implies an *average* (not marginal) return between 0.4× and 2.1× of cost **[D + I]**. That range straddles
-break-even, so the public numbers cannot settle the question.
+implies an *average* (not marginal) return between 0.4× and 2.1× of cost **[D + I]**, where 1.0× is
+break-even on this after-tax measure. That range straddles break-even, so the public numbers cannot settle the question.
 
 Abstracts of peer-reviewed studies on real US casino data report that established players often respond little to changes
 in free play **[U LIT-LUCAS-2024, LIT-LUCAS-2020]**, and Harrah's built its marketing around control-group
