@@ -1,7 +1,7 @@
 # Deliverable D — Interview preparation
 
 Source IDs refer to `sources/source_register.csv`, `sources/case_register.csv` and `outputs/*.json`.
-Tags: [P id] primary; [D] derived; [I] illustrative, not a Sands figure; [U id] unverified secondary; [R id] research.
+Tags: [P id] primary; [D] derived; [I] illustrative, not a Sands figure; [U id] unverified secondary (incl. research seen only as abstract).
 
 **1. "Couldn't the margin decline just be the Londoner ramp or bad hold?"**
 Partly, yes, and I tried to separate the two. Hold first: LVS discloses the EBITDA effect of normalising
@@ -24,14 +24,14 @@ I don't, and the report says so. The peer-reviewed evidence (C02–C05) shows th
 players often don't respond to free-play changes. That justifies testing the hypothesis, not assuming it.
 Macao is different: baccarat-led, visits constrained by travel, and a 2026 market where every operator was
 competing for displaced satellite-casino players. The public data gives an average return range of
-0.4–2.1×, which straddles break-even. That is exactly why the recommendation is a test. [R LIT-LUCAS-2017, LIT-LUCAS-2024; D economics.json; U PR-SATELLITE-2026]
+0.4–2.1×, which straddles break-even. That is exactly why the recommendation is a test. [U LIT-LUCAS-2024, LIT-LUCAS-2020; D economics.json; U PR-SATELLITE-2026]
 
 **4. "Walk me through why break-even is about 2× and not 1×."**
 Gaming tax and levies take about 40% of GGR; assume another ~10% in variable costs such as service, F&B
 and labour. Each incremental dollar of GGR therefore leaves about 50 cents of contribution. A $1 promotion
 needs $2 of incremental GGR to pay for itself: k* = 1/(1 − 0.40 − 0.10). If promotional play turns out to
 reduce taxable GGR, the promotion's net cost is only 60 cents and k* drops to 1.2×. That tax-treatment
-question is the first thing I'd confirm internally (notes/macau_context.md). [U PR-TAX-2022; I v = 0.10; D economics.json]
+question is the first thing I would ask Sands to confirm, if given the opportunity (notes/macau_context.md). [U PR-TAX-2022; I v = 0.10; D economics.json]
 
 **5. "How would you size the holdout without hurting revenue?"**
 Cap exposure at 5–10% of each cell for 8 weeks, so at worst you lose part of the incremental theo of a

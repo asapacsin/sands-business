@@ -10,8 +10,8 @@ date: "13 November 2026"
 >
 > **Evidence tags.** **[P id]** primary filing or official statistic (source ID and table);
 > **[D file]** derived by the author from primary data (file in `research/outputs/`);
-> **[I]** illustrative, not a Sands figure or forecast; **[U id]** unverified (earnings-call transcript copy,
-> broker note or press, not found in filings); **[R id]** published research (graded in `case_register.csv`).
+> **[I]** illustrative, not a Sands figure or forecast; **[U id]** unverified: earnings-call transcript copy,
+> broker note, press, or published research seen only as abstract/metadata (graded in `case_register.csv`).
 > Source IDs resolve in `research/sources/source_register.csv` (URL, date, SHA-256).
 > "LVS-ER" = Las Vegas Sands earnings release (8-K Ex.99.1), Macao property tables; "DICJ-Q" = DICJ
 > quarterly statistics, report 1 (totals) and report 3 (by game).
@@ -19,8 +19,8 @@ date: "13 November 2026"
 ## 1. Executive summary
 
 **The decision.** According to the Q2 2025 earnings call, Sands China raised mass-market customer
-reinvestment from late April 2025 to recover share, at a level management described as market-driven
-rather than set to a margin target **[U TR-LVS-2025Q2]**. The decision this report addresses is how to
+reinvestment from late April 2025 to recover share, with reinvestment applied "across the board" and the level to be "market sensitive" (management, verbatim)
+**[U TR-LVS-2025Q2]**. The decision this report addresses is how to
 size and allocate the *next* increment across the five Macao properties and customer tiers so that it earns
 positive incremental profit after Macao's ~40% gaming tax **[U PR-TAX-2022]**.
 
@@ -61,8 +61,8 @@ allocation (3.60) was folded into it as a reinvestment channel **[D RESEARCH_SPE
 
 The timing matters for three reasons:
 
-- **It is an active choice.** Management described the reinvestment step-up on the Q2 2025 call and said
-  the level would follow the market **[U TR-LVS-2025Q2]**.
+- **It is an active choice.** On the Q2 2025 call management said: "around late April, we started to implement
+  a more aggressive customer reinvestment program" and "We will, however, be market sensitive" **[U TR-LVS-2025Q2]**.
 - **The competitive context changed again in 2026.** SJM's satellite casinos closed on 30–31 December 2025;
   in 2025 they generated about HK$9.77bn (~US$1.25bn) of GGR, which every concessionaire competed for
   **[U PR-SATELLITE-2026]**.
@@ -96,15 +96,15 @@ reported a record 17.1% market share in 3Q26, which shows rivals were also compe
 Sixteen cases were reviewed and graded (`sources/case_register.csv`). Three lessons matter:
 
 1. **Control groups, not intuition.** Harrah's (now Caesars) is the best-known example of offer decisions
-   tested against control groups **[R LIT-LOVEMAN-2003, grade E3]**: persuasive on method, not proof of
+   tested against control groups **[U LIT-LOVEMAN-2003, grade E3]**: persuasive on method, not proof of
    effect size.
-2. **Established players often do not respond to free play.** Peer-reviewed studies using real casino data
-   found little response to free-play *reductions*; visitation fell about 20% only where free play was
-   eliminated entirely **[R LIT-LUCAS-2024, LIT-LUCAS-2017, LIT-LUCAS-2020, grade E2]**. These are US
+2. **Established players often do not respond to free play.** Abstracts of peer-reviewed studies using real casino data report
+   little response to free-play *reductions*; visitation fell about 20% only where free play was
+   eliminated entirely **[U LIT-LUCAS-2024, LIT-LUCAS-2020, grade E2]**. These are US
    slot-player studies, so effect sizes do **not** transfer to Macao's baccarat-led mass market; the
    hypothesis and test design do.
 3. **Rooms are a reinvestment currency.** Harrah's Cherokee priced rooms by total guest value and reported
-   ~15% revenue gains against 3–7% for typical installations **[R LIT-METTERS-2008, grade E3, vendor co-authors]**.
+   ~15% revenue gains against 3–7% for typical installations **[U LIT-METTERS-2008, grade E3, vendor co-authors]**.
 
 Vendor case studies (workforce scheduling, AI personalisation) report large gains without counterfactuals;
 they are graded E4 and used only to generate test ideas.
@@ -286,13 +286,12 @@ Primary data (66 registered sources with URLs and SHA-256 hashes in `sources/sou
 - **[P WYNN-ER-*, MGM-ER-*, MELCO-ER-*]** Wynn Resorts, MGM Resorts International and Melco Resorts &
   Entertainment earnings releases, 2023–2026, SEC EDGAR.
 
-Research and secondary sources (registered; tags as used above):
+Research and secondary sources (registered; tags as used above). Research items were read as abstracts or metadata only:
 
-- **[R LIT-LOVEMAN-2003]** Loveman, G. (2003). Diamonds in the Data Mine. *Harvard Business Review*, May.
-- **[R LIT-LUCAS-2017]** Lucas, A. F., & Spilde, K. (2017). *Cornell Hospitality Quarterly* (free-play campaigns at two tribal casinos; exact title to be confirmed). https://oasis.library.unlv.edu/hotel_fac_articles/368
-- **[R LIT-LUCAS-2024]** Lucas, A. F., & Spilde, K. (2024). *UNLV Gaming Research & Review Journal* 28(1). https://oasis.library.unlv.edu/grrj/vol28/iss1/1
-- **[R LIT-LUCAS-2020]** Lucas, A. F., Cho, & Singh (2020). *Cornell Hospitality Quarterly*. https://journals.sagepub.com/doi/ref/10.1177/1938965520963047
-- **[R LIT-METTERS-2008]** Metters, R. et al. (2008). The "Killer Application" of Revenue Management: Harrah's Cherokee Casino & Hotel. *Interfaces* 38(3), 161–175.
+- **[U LIT-LOVEMAN-2003]** Loveman, G. (2003). Diamonds in the Data Mine. *Harvard Business Review*, May.
+- **[U LIT-LUCAS-2024]** Lucas, A. F., & Spilde, K. (2024). Measuring the Impact of Reduced Free-play Offers on Casino Loyalty Behavior. *UNLV Gaming Research & Review Journal* 28(1). Abstract only. https://oasis.library.unlv.edu/grrj/vol28/iss1/1
+- **[U LIT-LUCAS-2020]** Lucas, A. F., Cho, S. R., & Singh, A. K. (2020). Impact of Casino Free Play on the Wagering Behavior of Light- and Medium-User Groups. *Cornell Hospitality Quarterly*. Abstract only. https://oasis.library.unlv.edu/hotel_fac_articles/368
+- **[U LIT-METTERS-2008]** Metters, R. et al. (2008). The "Killer Application" of Revenue Management: Harrah's Cherokee Casino & Hotel. *Interfaces* 38(3), 161–175.
 - **[U TR-LVS-2025Q2]** LVS Q2 2025 earnings call transcript (third-party copy). https://www.fool.com/earnings/call-transcripts/2025/07/23/las-vegas-sands-lvs-q2-2025-earnings-transcript
 - **[U BRK-CLSA-2026Q3]** CLSA note on Sands China 3Q26 via Futu News. https://news.futunn.com/en/post/1001893168/major-brokerage-clsa-sands-china-01928-hk-q3-results-meet
 - **[U PR-TAX-2022]** GGRAsia (2022). https://www.ggrasia.com/macau-40pct-ggr-tax-in-new-law-ce-can-cut-up-to-5-points/

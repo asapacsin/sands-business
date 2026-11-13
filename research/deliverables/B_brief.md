@@ -8,13 +8,13 @@ date: "November 2026"
 information and no affiliation with Sands China. It is offered as an example of how I would approach a
 commercial question; it does not assess management. The full report, data and code are available on request.
 *Evidence tags:* **[P id]** primary filing or statistic; **[D]** derived by me from primary data;
-**[I]** illustrative, not a Sands figure; **[U id]** unverified (call transcript or press); **[R id]** published
-research. IDs refer to the project's source register.
+**[I]** illustrative, not a Sands figure; **[U id]** unverified (call transcript, press, or research seen only as
+abstract/metadata). IDs refer to the project's source register.
 
 ### The question
 
 According to its Q2 2025 earnings call, Sands China raised mass-market customer reinvestment from late
-April 2025 to rebuild share, with the level set by market conditions **[U TR-LVS-2025Q2]**. The open
+April 2025 to rebuild share, with the level to be "market sensitive" (management, verbatim) **[U TR-LVS-2025Q2]**. The open
 question for any operator in that position is a **marginal** one: does the next dollar of reinvestment
 create more than it costs once Macao's ~40% gaming tax is paid **[U PR-TAX-2022]**? And which properties
 and customer groups should receive it?
@@ -43,9 +43,9 @@ confirming **[I]**. Depending on how much of the share gain can be attributed to
 implies an *average* (not marginal) return between 0.4× and 2.1× of cost **[D + I]**. That range straddles
 break-even, so the public numbers cannot settle the question.
 
-Peer-reviewed studies on real US casino data find that established players often respond little to changes
-in free play **[R LIT-LUCAS-2017, LIT-LUCAS-2024]**, and Harrah's built its marketing around control-group
-testing **[R LIT-LOVEMAN-2003]**. Those results come from slot-based US markets and do not transfer
+Abstracts of peer-reviewed studies on real US casino data report that established players often respond little to changes
+in free play **[U LIT-LUCAS-2024, LIT-LUCAS-2020]**, and Harrah's built its marketing around control-group
+testing **[U LIT-LOVEMAN-2003]**. Those results come from slot-based US markets and do not transfer
 directly to Macao's baccarat-led market, but the testing discipline does.
 
 ### A practical next step management could evaluate
