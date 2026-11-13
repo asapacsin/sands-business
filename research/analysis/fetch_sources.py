@@ -23,7 +23,7 @@ for row in csv.DictReader(open(ROOT / "sources/source_register.csv")):
         continue
     out.parent.mkdir(parents=True, exist_ok=True)
     if not out.exists():
-        subprocess.run(["curl", "-s", "-L", "-A", UA, url, "-o", str(out)], check=True)
+        subprocess.run(["curl", "-s", "-L", "--retry", "5", "--retry-all-errors", "--retry-delay", "2", "-A", UA, url, "-o", str(out)], check=True)
     digest = hashlib.sha256(out.read_bytes()).hexdigest()
     expected = row.get("sha256_of_downloaded_file")
     status = "ok" if not expected or expected == digest else "HASH MISMATCH (source may have been re-published)"

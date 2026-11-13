@@ -4,82 +4,110 @@
     {
       "id": "T01",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 10,
       "data_class": "PUB",
       "action": "Set up research workspace \u2014 execute task card T01 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
-      "depends_on": []
+      "depends_on": [],
+      "evidence": [
+        "research/ layout, CSV templates, requirements.txt, tests scaffold"
+      ]
     },
     {
       "id": "T02",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 20,
       "data_class": "PUB",
       "action": "Source acquisition: Sands China and LVS filings \u2014 execute task card T02 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T01"
+      ],
+      "evidence": [
+        "16 LVS 8-K Ex.99.1 releases (Q4 2022-Q3 2026) registered with SHA-256 in sources/source_register.csv"
       ]
     },
     {
       "id": "T03",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 30,
       "data_class": "PUB",
       "action": "Upgrade spec facts to primary \u2014 execute task card T03 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T02"
+      ],
+      "evidence": [
+        "sources/fact_verification.csv: 14 PRIMARY \u2714, 3 remain SECONDARY (call-only)"
       ]
     },
     {
       "id": "T04",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 50,
       "data_class": "PUB",
       "action": "Peer filings acquisition \u2014 execute task card T04 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T01"
+      ],
+      "evidence": [
+        "46 Wynn/MGM/Melco releases",
+        "data/processed/operator_quarter.csv",
+        "Galaxy/SJM documented gap (not on EDGAR)"
       ]
     },
     {
       "id": "T05",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 40,
       "data_class": "PUB",
       "action": "Market statistics acquisition \u2014 execute task card T05 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T01"
+      ],
+      "evidence": [
+        "DICJ quarterly XML 2023-2026",
+        "data/processed/market_quarter.csv",
+        "reconciles to DICJ 2025 total MOP247,404m"
       ]
     },
     {
       "id": "T06",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 70,
       "data_class": "PUB",
       "action": "External case-study review \u2014 execute task card T06 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T01"
+      ],
+      "evidence": [
+        "sources/case_register.csv 16 cases (5 E2)",
+        "sources/search_log.csv"
       ]
     },
     {
       "id": "T07",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 60,
       "data_class": "PUB",
       "action": "Macau context and regulation brief \u2014 execute task card T07 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T05"
+      ],
+      "evidence": [
+        "notes/macau_context.md",
+        "tau ~40% SECONDARY",
+        "law-number correction applied to spec v1.1"
       ]
     },
     {
       "id": "T08",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 80,
       "data_class": "PUB",
       "action": "Operator-quarter panel \u2014 execute task card T08 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
@@ -87,71 +115,98 @@
         "T02",
         "T04",
         "T05"
+      ],
+      "evidence": [
+        "data/processed/operator_quarter.csv + sands_panel.csv",
+        "tests/test_data_integrity.py"
       ]
     },
     {
       "id": "T09",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 90,
       "data_class": "PUB",
       "action": "Sands property-level decomposition \u2014 execute task card T09 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T02",
         "T03"
+      ],
+      "evidence": [
+        "outputs/tables/T3_property_bridge_2026Q3_vs_2025Q3.csv, property_margin_by_quarter.csv, F3, F4"
       ]
     },
     {
       "id": "T10",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 100,
       "data_class": "PUB",
       "action": "Hotel KPI analysis and comp-room opportunity frame \u2014 execute task card T10 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T09",
         "T05"
+      ],
+      "evidence": [
+        "outputs/tables/hotel_*",
+        "F5",
+        "P(sellout) in model/assumptions.json (ILLUSTRATIVE, anchored to PRIMARY occupancy)"
       ]
     },
     {
       "id": "T11",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 110,
       "data_class": "PUB",
       "action": "Net-to-gross proxy for deductions \u2014 execute task card T11 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T09"
+      ],
+      "evidence": [
+        "outputs/tables/net_to_gross_gap_pct.csv",
+        "F2",
+        "caveat in results.json (method unvalidated against company deduction breakdown)"
       ]
     },
     {
       "id": "T12",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 120,
       "data_class": "PUB",
       "action": "Share\u2013margin trade-off and quasi-experimental analysis \u2014 execute task card T12 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T08",
         "T07"
+      ],
+      "evidence": [
+        "outputs/results.json margin_did (+robustness, placebo, LOO)",
+        "share_margin_tradeoff table",
+        "F1"
       ]
     },
     {
       "id": "T13",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 130,
       "data_class": "PUB",
       "action": "Unit-economics model \u2014 execute task card T13 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T07",
         "T10"
+      ],
+      "evidence": [
+        "analysis/economics.py, outputs/economics.json, F6",
+        "tests/test_models.py",
+        "spec v1.2 formula correction"
       ]
     },
     {
       "id": "T14",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 140,
       "data_class": "PUB",
       "action": "Transfer reasoning chains \u2014 execute task card T14 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
@@ -159,35 +214,44 @@
         "T06",
         "T07",
         "T09"
+      ],
+      "evidence": [
+        "deliverables/transfer_analysis.md (6 chains)"
       ]
     },
     {
       "id": "T15",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 150,
       "data_class": "PUB",
       "action": "Decision matrix \u2014 execute task card T15 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T14"
+      ],
+      "evidence": [
+        "deliverables/transfer_analysis.md decision matrix (8 rows)"
       ]
     },
     {
       "id": "T16",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 160,
       "data_class": "PUB",
       "action": "Scenario and sensitivity model \u2014 execute task card T16 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T13",
         "T12"
+      ],
+      "evidence": [
+        "analysis/scenarios.py, outputs/scenario_results.json, F7, F8, sensitivity_tornado.csv"
       ]
     },
     {
       "id": "T17",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 180,
       "data_class": "PUB",
       "action": "Recommendation drafting \u2014 execute task card T17 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
@@ -195,46 +259,59 @@
         "T12",
         "T15",
         "T16"
+      ],
+      "evidence": [
+        "deliverables/A_report.md \u00a78"
       ]
     },
     {
       "id": "T18",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 170,
       "data_class": "PUB",
       "action": "Experiment protocol \u2014 execute task card T18 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T13",
         "T07"
+      ],
+      "evidence": [
+        "deliverables/experiment_protocol.md (+PDF)"
       ]
     },
     {
       "id": "T19",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 190,
       "data_class": "INT",
       "action": "Internal-data requirements specification \u2014 execute task card T19 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T18"
+      ],
+      "evidence": [
+        "deliverables/internal_data_request.md"
       ]
     },
     {
       "id": "T20",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 200,
       "data_class": "PUB",
       "action": "Holdout analysis code on synthetic data \u2014 execute task card T20 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T18"
+      ],
+      "evidence": [
+        "analysis/holdout_analysis.py",
+        "synthetic 90% CI coverage 91.2% in both cases (500 runs)"
       ]
     },
     {
       "id": "T21",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 210,
       "data_class": "PUB",
       "action": "Deliverable A draft \u2014 execute task card T21 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
@@ -242,50 +319,66 @@
         "T17",
         "T18",
         "T19"
+      ],
+      "evidence": [
+        "deliverables/A_report.md + PDF (9 pages)"
       ]
     },
     {
       "id": "T22",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 220,
       "data_class": "PUB",
       "action": "Evidence QA pass \u2014 execute task card T22 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T21"
+      ],
+      "evidence": [
+        "qa/qa_check.py: 37/37 checks pass",
+        "qa/qa_report.md"
       ]
     },
     {
       "id": "T23",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 230,
       "data_class": "PUB",
       "action": "Deliverable B brief \u2014 execute task card T23 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T22"
+      ],
+      "evidence": [
+        "deliverables/B_brief.md + PDF (2 pages)"
       ]
     },
     {
       "id": "T24",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 240,
       "data_class": "PUB",
       "action": "Deliverable D interview prep \u2014 execute task card T24 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T22"
+      ],
+      "evidence": [
+        "deliverables/D_interview.md (8 Q&As)"
       ]
     },
     {
       "id": "T25",
       "owner": "AUTONOMOUS",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "priority": 250,
       "data_class": "PUB",
       "action": "Reproducibility check \u2014 execute task card T25 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
       "depends_on": [
         "T21"
+      ],
+      "evidence": [
+        "qa/reproducibility_log.md: 66/66 source hashes, 18/18 outputs byte-identical from clean clone"
       ]
     },
     {

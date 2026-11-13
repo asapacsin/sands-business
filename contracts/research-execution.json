@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "research-execution",
+  "goal": "Execute tasks T01-T25 of research/RESEARCH_SPEC.md from public data and produce Deliverables A-D with reproducible materials.",
+  "acceptance": "Spec §15 acceptance criteria 1-9: decision questions answered; zero open QA items; economics after gaming tax; no causal claims without E1 evidence; specific recommendation; graded transfer verdicts; one-command reproducibility; tone and boundary rules; internal-data needs separated from findings. An independent reviewer must confirm no fabricated sources or figures.",
+  "approved_paths": ["research/**", ".github/workflows/ci.yml", ".gitignore", "contracts/research-execution.json"],
+  "forbidden_paths": [".claude/**"],
+  "boundaries": ["Public information only; no implied affiliation or internal access", "Nothing sent outside the repository without human approval (T26)", "Illustrative numbers labelled"],
+  "budgets": {"max_attempts": 3, "max_total_seconds": 1800},
+  "gates": [
+    {"id": "spec-structure", "level": "static", "command": ["python3", "scripts/check_research_spec.py", "research/RESEARCH_SPEC.md"], "timeout_seconds": 60, "required": true},
+    {"id": "task-frontier", "level": "static", "command": ["python3", "scripts/frontier.py", "check", "--registry", "research/work.json"], "timeout_seconds": 60, "required": true},
+    {"id": "research-tests", "level": "unit", "command": ["python3", "-m", "unittest", "discover", "-s", "research/tests"], "timeout_seconds": 300, "required": true},
+    {"id": "evidence-qa", "level": "integration", "command": ["python3", "research/qa/qa_check.py"], "timeout_seconds": 300, "required": true},
+    {"id": "controller-tests", "level": "unit", "command": ["python3", "-m", "unittest", "discover", "-s", "tests"], "timeout_seconds": 300, "required": true}
+  ]
+}
