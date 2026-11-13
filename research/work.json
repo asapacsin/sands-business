@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "work": [
+    {
+      "id": "T01",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 10,
+      "data_class": "PUB",
+      "action": "Set up research workspace \u2014 execute task card T01 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": []
+    },
+    {
+      "id": "T02",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 20,
+      "data_class": "PUB",
+      "action": "Source acquisition: Sands China and LVS filings \u2014 execute task card T02 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T01"
+      ]
+    },
+    {
+      "id": "T03",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 30,
+      "data_class": "PUB",
+      "action": "Upgrade spec facts to primary \u2014 execute task card T03 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T02"
+      ]
+    },
+    {
+      "id": "T04",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 50,
+      "data_class": "PUB",
+      "action": "Peer filings acquisition \u2014 execute task card T04 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T01"
+      ]
+    },
+    {
+      "id": "T05",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 40,
+      "data_class": "PUB",
+      "action": "Market statistics acquisition \u2014 execute task card T05 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T01"
+      ]
+    },
+    {
+      "id": "T06",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 70,
+      "data_class": "PUB",
+      "action": "External case-study review \u2014 execute task card T06 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T01"
+      ]
+    },
+    {
+      "id": "T07",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 60,
+      "data_class": "PUB",
+      "action": "Macau context and regulation brief \u2014 execute task card T07 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T05"
+      ]
+    },
+    {
+      "id": "T08",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 80,
+      "data_class": "PUB",
+      "action": "Operator-quarter panel \u2014 execute task card T08 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T02",
+        "T04",
+        "T05"
+      ]
+    },
+    {
+      "id": "T09",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 90,
+      "data_class": "PUB",
+      "action": "Sands property-level decomposition \u2014 execute task card T09 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T02",
+        "T03"
+      ]
+    },
+    {
+      "id": "T10",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 100,
+      "data_class": "PUB",
+      "action": "Hotel KPI analysis and comp-room opportunity frame \u2014 execute task card T10 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T09",
+        "T05"
+      ]
+    },
+    {
+      "id": "T11",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 110,
+      "data_class": "PUB",
+      "action": "Net-to-gross proxy for deductions \u2014 execute task card T11 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T09"
+      ]
+    },
+    {
+      "id": "T12",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 120,
+      "data_class": "PUB",
+      "action": "Share\u2013margin trade-off and quasi-experimental analysis \u2014 execute task card T12 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T08",
+        "T07"
+      ]
+    },
+    {
+      "id": "T13",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 130,
+      "data_class": "PUB",
+      "action": "Unit-economics model \u2014 execute task card T13 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T07",
+        "T10"
+      ]
+    },
+    {
+      "id": "T14",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 140,
+      "data_class": "PUB",
+      "action": "Transfer reasoning chains \u2014 execute task card T14 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T06",
+        "T07",
+        "T09"
+      ]
+    },
+    {
+      "id": "T15",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 150,
+      "data_class": "PUB",
+      "action": "Decision matrix \u2014 execute task card T15 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T14"
+      ]
+    },
+    {
+      "id": "T16",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 160,
+      "data_class": "PUB",
+      "action": "Scenario and sensitivity model \u2014 execute task card T16 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T13",
+        "T12"
+      ]
+    },
+    {
+      "id": "T17",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 180,
+      "data_class": "PUB",
+      "action": "Recommendation drafting \u2014 execute task card T17 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T12",
+        "T15",
+        "T16"
+      ]
+    },
+    {
+      "id": "T18",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 170,
+      "data_class": "PUB",
+      "action": "Experiment protocol \u2014 execute task card T18 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T13",
+        "T07"
+      ]
+    },
+    {
+      "id": "T19",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 190,
+      "data_class": "INT",
+      "action": "Internal-data requirements specification \u2014 execute task card T19 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T18"
+      ]
+    },
+    {
+      "id": "T20",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 200,
+      "data_class": "PUB",
+      "action": "Holdout analysis code on synthetic data \u2014 execute task card T20 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T18"
+      ]
+    },
+    {
+      "id": "T21",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 210,
+      "data_class": "PUB",
+      "action": "Deliverable A draft \u2014 execute task card T21 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T17",
+        "T18",
+        "T19"
+      ]
+    },
+    {
+      "id": "T22",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 220,
+      "data_class": "PUB",
+      "action": "Evidence QA pass \u2014 execute task card T22 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T21"
+      ]
+    },
+    {
+      "id": "T23",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 230,
+      "data_class": "PUB",
+      "action": "Deliverable B brief \u2014 execute task card T23 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T22"
+      ]
+    },
+    {
+      "id": "T24",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 240,
+      "data_class": "PUB",
+      "action": "Deliverable D interview prep \u2014 execute task card T24 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T22"
+      ]
+    },
+    {
+      "id": "T25",
+      "owner": "AUTONOMOUS",
+      "status": "NOT_RUN",
+      "priority": 250,
+      "data_class": "PUB",
+      "action": "Reproducibility check \u2014 execute task card T25 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T21"
+      ]
+    },
+    {
+      "id": "T26",
+      "owner": "HUMAN_DECISION",
+      "status": "HUMAN_REQUIRED",
+      "priority": 260,
+      "data_class": "HUM",
+      "action": "Human review and send decision \u2014 execute task card T26 in research/RESEARCH_SPEC.md \u00a714 and meet its completion criteria",
+      "depends_on": [
+        "T22",
+        "T23",
+        "T24",
+        "T25"
+      ],
+      "automation_blocker": "outward_facing_communication",
+      "procedure": "Author reviews Deliverables A/B/D and the QA report for accuracy and tone, then decides whether, when and how to share with the recruitment contact",
+      "pass_criteria": "Explicit written approval recorded; nothing is sent automatically",
+      "expected_return": "Decision record: send / revise (with notes) / do not send, with date",
+      "quantified": {
+        "options": [
+          "send as is",
+          "revise then send",
+          "do not send"
+        ]
+      }
+    }
+  ]
+}

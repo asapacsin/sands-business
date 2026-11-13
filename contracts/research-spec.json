@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "research-spec",
+  "goal": "Produce an execution-ready research specification for a data-driven reinvestment-allocation study of Sands China, with a machine-readable task backlog.",
+  "acceptance": "research/RESEARCH_SPEC.md contains the 15 required sections, a justified decision selection with correct matrix arithmetic, task cards with inputs/procedure/output/dependencies/completion for every task, evidence labels on factual claims, and a registry (research/work.json) that agrees with the spec. An independent reviewer confirms no fabricated sources or unlabelled unverified figures.",
+  "approved_paths": ["research/**", "scripts/check_research_spec.py", "tests/test_research_spec.py", "contracts/research-spec.json"],
+  "forbidden_paths": [".github/**", ".claude/**"],
+  "boundaries": [
+    "Public information only; never imply affiliation with or internal access to Sands China",
+    "Never present SECONDARY or TO-VERIFY facts as primary-verified",
+    "Illustrative numbers must be labelled as illustrative, not Sands figures",
+    "Do not write the final research report in this task"
+  ],
+  "model_policy": {"executor_default": "low-cost-capable", "independent_reviewer": "stronger, different session", "escalate_on": ["decision selection challenged", "two failed fixes"]},
+  "budgets": {"max_attempts": 3, "max_total_seconds": 900},
+  "gates": [
+    {"id": "spec-structure", "level": "static", "command": ["python3", "scripts/check_research_spec.py", "research/RESEARCH_SPEC.md"], "timeout_seconds": 60, "required": true},
+    {"id": "task-frontier", "level": "static", "command": ["python3", "scripts/frontier.py", "check", "--registry", "research/work.json"], "timeout_seconds": 60, "required": true},
+    {"id": "unit-tests", "level": "unit", "command": ["python3", "-m", "unittest", "discover", "-s", "tests"], "timeout_seconds": 300, "required": true}
+  ]
+}

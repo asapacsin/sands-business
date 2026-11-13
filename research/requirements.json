@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "requirements": [
+    {"id": "spec-structure-and-backlog", "min_level": "static", "gate_ids": ["spec-structure", "task-frontier"], "terminal_required": false},
+    {"id": "gate-and-controller-tests", "min_level": "unit", "gate_ids": ["unit-tests"], "terminal_required": false}
+  ]
+}
