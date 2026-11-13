@@ -27,7 +27,7 @@ Review packet (JSON): {packet}
    (list them precisely). NOT_VERIFIED if you could not check.
 Reply with ONLY one JSON object, no prose:
 {{"verdict": "PASS|REWORK|BLOCKED|NOT_VERIFIED", "reviewed_fingerprint": "{fp}", "reviewed_contract_hash": "{ch}",
-  "findings": [{{"severity": "high|medium|low", "file": "...", "issue": "...", "evidence": "..."}}], "next_action": "..."}}"""
+  "findings": ["[severity] file: issue. Evidence: ..."], "next_action": "..."}}"""
 
 
 def main() -> int:
@@ -47,6 +47,11 @@ def main() -> int:
         sys.stderr.write(proc.stderr[-2000:] + proc.stdout[-2000:])
         return 1
     result = json.loads(match.group(0))
+    # controller schema: findings must be strings
+    result["findings"] = [f if isinstance(f, str) else
+                          f"[{f.get('severity', '?')}] {f.get('file', '?')}: {f.get('issue', '')} Evidence: {f.get('evidence', '')}"
+                          for f in result.get("findings", [])]
+    result["next_action"] = str(result.get("next_action", ""))
     result_path.write_text(json.dumps(result, indent=2))
     (result_path.parent / "reviewer_transcript.txt").write_text(proc.stdout)
     return 0
