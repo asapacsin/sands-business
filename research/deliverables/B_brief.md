@@ -21,15 +21,16 @@ and customer groups should receive it?
 
 ### What the public data shows (2Q25–3Q26 vs 3Q23–1Q25)
 
-- **Share recovered.** Sands' share of Macao GGR rose from 22.4% (1Q25) to 25.4% (3Q26) **[D from P LVS-ER, DICJ-Q]**.
-  A broker note cites 25.4% for 3Q26 **[U BRK-CLSA-2026Q3]**.
+- **Share recovered.** Sands' share of Macao GGR, as I derive it from LVS volumes and DICJ data, rose from
+  22.4% (1Q25) to 25.4% (3Q26) **[D from P LVS-ER, DICJ-Q]**; a broker note cites 25.4% for 3Q26
+  **[U BRK-CLSA-2026Q3]**. The company-defined mass share reportedly rose from 23.6% to 26.1% **[U TR-LVS-2025Q3, PR-SCL-3Q26]**.
 - **Reinvestment rose.** The share of gross gaming win not booked as casino revenue (rebates, discounts,
   comps and commissions) rose from 20.5% to 23.5%, roughly US$226m a year **[D]**. This is a proxy, not
   an internal ledger.
 - **Margins compressed, partly across the market.** On a *directional* comparison (peer definitions
   differ: EBITDA vs EBITDAR), Sands' five-property margin fell 4.2 points while Wynn, MGM and Melco moved
   by −2.6 to +0.3 points **[D from P LVS-ER, WYNN/MGM/MELCO-ER]**. Sands' 3Q26 five-property margin of 27.8%
-  (27.3% including ferry and other operations **[P LVS-ER-2026-10-21]**) is at or above those peers. The
+  (27.3% including ferry and other operations **[P LVS-ER-2026-10-21]**) is in line with or above those peers. The
   relative gap of about −2.8 points **[D]** coincides with the Londoner ramp, room renovations and the
   closure of SJM's satellite casinos **[U PR-SATELLITE-2026]**; how much each contributed is my
   inference and cannot be separated with public data.
@@ -38,7 +39,7 @@ and customer groups should receive it?
 
 ### Why the answer needs a test, not a model
 
-Assuming a 40% gaming tax and 10% variable cost, a dollar of reinvestment must create about **$2 of
+Assuming a 40% gaming tax (as reported in trade press; statute not yet checked) and 10% variable cost, a dollar of reinvestment must create about **$2 of
 incremental GGR** to break even, or about $1.2 if promotional play reduces taxable GGR, which needs
 confirming **[I]**. Depending on how much of the share gain can be attributed to reinvestment, public data
 implies an *average* (not marginal) return between 0.4× and 2.1× of cost **[D + I]**. That range straddles

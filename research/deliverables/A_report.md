@@ -16,6 +16,20 @@ date: "13 November 2026"
 > "LVS-ER" = Las Vegas Sands earnings release (8-K Ex.99.1), Macao property tables; "DICJ-Q" = DICJ
 > quarterly statistics, report 1 (totals) and report 3 (by game).
 
+## Where each management question is answered
+
+| Management question **[I: structure only]** | Section |
+|---|---|
+| 1. What decision should Sands China management consider? | §1 (Decision), §8 |
+| 2. Why is this decision important now? | §2 |
+| 3. What do Sands' financial results tell us? | §5 |
+| 4. What do comparable casino operators teach us? | §4, §6 |
+| 5. Which alternatives should management evaluate? | §7 (scenarios), §8 (test arms) |
+| 6. What does the available evidence support? | §1 findings, §5.5, §7, §9 |
+| 7. What should Sands do next? | §8 |
+| 8. What additional internal data would be needed? | §8 (link to `internal_data_request.md`) |
+| 9. How could management determine whether the decision improves financial performance? | §8 (metric, threshold), `experiment_protocol.md` |
+
 ## 1. Executive summary
 
 **The decision.** According to the Q2 2025 earnings call, Sands China raised mass-market customer
@@ -26,8 +40,10 @@ positive incremental profit after Macao's ~40% gaming tax **[U PR-TAX-2022]**.
 
 **What the public evidence shows** (2Q25–3Q26 against 3Q23–1Q25):
 
-1. **Share has recovered.** Sands' derived share of Macao total GGR rose from 22.4% (1Q25) to 25.4%
-   (3Q26), and the derived mass-win index rose 4.5 points **[D results.json; from P LVS-ER, DICJ-Q]**.
+1. **Share has recovered.** Sands' *derived* share of Macao total GGR (author's calculation from LVS volumes
+   and DICJ) rose from 22.4% (1Q25) to 25.4% (3Q26), and the derived mass-win index rose 4.5 points
+   **[D results.json; from P LVS-ER, DICJ-Q]**. The company-defined mass revenue share reportedly rose from
+   23.6% to 26.1% over the same period **[U TR-LVS-2025Q3, PR-SCL-3Q26]**.
 2. **More of gross win is being reinvested.** The gap between implied gross win and booked casino revenue
    rose from 20.5% to 23.5% of gross win, about **US$226m a year** of additional rebates, discounts, comps
    and commissions **[D results.json net_to_gross]**. This is a proxy, not a promotional ledger.
@@ -36,7 +52,7 @@ positive incremental profit after Macao's ~40% gaming tax **[U PR-TAX-2022]**.
    **[D results.json margin_did]**. The difference of about −2.8 points (−2.1 excluding the low-hold 2Q26)
    is consistent with reinvestment costs, but it also spans the Londoner ramp and the satellite-casino
    closures. Sands' 3Q26 margin (27.8% for five properties; 27.3% including ferry and other
-   **[P LVS-ER-2026-10-21]**) remains at or above the three SEC-filing peers (23.2–27.8%)
+   **[P LVS-ER-2026-10-21]**) is in line with or above the three SEC-filing peers (23.2–27.8%)
    **[P WYNN/MGM/MELCO-ER 3Q26]**.
 4. **Whether the increment pays cannot be determined from public data.** Implied *average* returns range
    from 0.4× to 2.1× of cost, depending on how much of the share gain is attributed to reinvestment
@@ -181,7 +197,7 @@ opportunity cost of complimentary rooms material.
 A difference-in-differences comparison of mean margins (post 2Q25–3Q26 vs pre 3Q23–1Q25) gives Sands
 **−2.8 points** relative to the peer average **[D results.json margin_did]**. Robustness checks, all **[D]**:
 
-- Hold-adjusting Sands: −2.8.
+- Hold-adjusting Sands: −2.9.
 - Excluding 2Q26: −2.1.
 - Leaving out one peer at a time: −1.9 to −3.4.
 - Placebo start dates in 2024: −0.3 to −0.8.
@@ -208,7 +224,8 @@ by case rather than randomising them; and allow for the 2026 competitive scrambl
 ## 7. Quantitative decision framework
 
 **Break-even.** The incremental GGR needed per $1 of reinvestment is k* = c / (1 − τ − v), where τ is the
-gaming tax rate (~40% **[U PR-TAX-2022]**), v is variable cost as a share of GGR (10% **[I]**) and c is 1,
+gaming tax rate (~40% as reported in trade press **[U PR-TAX-2022]**; the statute was not read, and every
+break-even figure in this report depends on this rate, with 35% shown as a sensitivity), v is variable cost as a share of GGR (10% **[I]**) and c is 1,
 or 1 − τ if promotional play reduces taxable GGR (unverified). k* = **2.0×**, or 1.2× if promotional
 play is tax-deductible **[D economics.json + I]**.
 

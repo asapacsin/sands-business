@@ -34,7 +34,7 @@ Checks: 45; failed: 0
 | figure F6_break_even exists and is referenced | PASS |  |
 | figure F7_scenarios exists and is referenced | PASS |  |
 | figure F8_tornado exists and is referenced | PASS |  |
-| A: 8–12 rendered pages (PDF) | PASS | pages=9 |
+| A: 8–12 rendered pages (PDF) | PASS | pages=10 |
 | B: ≤ 2 rendered pages (PDF) | PASS | pages=2 |
 | D: 8 questions | PASS |  |
 | B number '22.4%' traceable to A | PASS |  |
